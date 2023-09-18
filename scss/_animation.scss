@@ -1,0 +1,42 @@
+@mixin allAnimation {
+  @keyframes upndown {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-30px);
+    }
+  }
+  @keyframes changeImage {
+    0%,
+    100% {
+      opacity: 0;
+    }
+    50% {
+      background-image: url("../img/h44-b.png");
+      opacity: 1;
+    }
+  }
+
+  @keyframes logoName {
+    0%,
+    100% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+      z-index: -1;
+    }
+  }
+}

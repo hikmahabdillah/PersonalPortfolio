@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Particle | Web Portofolio</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      rel="shortcut icon"
+      href="img/20230722_195256.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <div class="box-intro">
+      <div class="logo-intro"></div>
+      <h2>PARTICLE</h2>
+    </div>
+    <div class="container">
+      <!-- HEADER -->
+      <div class="header">
+        <nav class="menu">
+          <div class="brand">
+            <img src="img/h44-wpng 2.png" alt="" />
+          </div>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <div class="menu-toggle">
+            <input type="checkbox" name="" id="" />
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </nav>
+        <img class="bg-image" src="img/bgh44.png" alt="" />
+
+        <!-- MAIN HEADER -->
+        <div class="main-header">
+          <div class="left-content">
+            <div class="greeting">
+              <h2>HELLO WORLD!</h2>
+              <h1>HIKMAH ALDRIN</h1>
+              <h3>FRONT END DEVELOPER</h3>
+              <p>
+                Hi There! I'm a Graduated of SMKN 4 Malang, majoring in Software
+                Engineering for 11 months of internship experience in an IT
+                company in Malang City.
+              </p>
+              <button type="button"><a href="#about">ABOUT ME</a></button>
+            </div>
+          </div>
+          <div class="right-content">
+            <img src="img/20230714_221356.png" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <!-- ABOUT ME -->
+      <section id="about" class="about">
+        <div class="left-about">
+          <div class="kotak45"></div>
+          <img src="img/20230714_221356.png" alt="" />
+          <img class="poto" src="img/profil.png" alt="" />
+        </div>
+        <div class="right-about">
+          <div class="main-about">
+            <h4>A LITTLE BIT</h4>
+            <h2>About</h2>
+            <p>
+              Hello World! I'm Hikmah Aldrin Abdillah. I'm a Graduated of SMKN 4
+              Malang, majoring in Software Engineering for 11 months of
+              internship experience in an IT company in Malang City. This
+              experience as an intern gave me the opportunity to apply my
+              knowledge and hone my skills in the IT field. But now I am Student
+              of Politeknik Negeri Malang, majoring in Informatics Engineering.
+            </p>
+            <button type="button">DOWNLOAD CV</button>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script>
+      const menuToggle = document.querySelector(".menu-toggle input");
+      const nav = document.querySelector("nav ul");
+      menuToggle.addEventListener("click", function () {
+        nav.classList.toggle("slide");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,75 @@
+@use "intro" as i;
+@use "home" as h;
+@use "responsive" as r;
+@use "animation" as a;
+@use "nav" as n;
+@use "about" as ab;
+
+html {
+  scroll-behavior: smooth;
+}
+
+// font
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@800&family=Poppins:wght@200&family=Raleway:wght@800&family=Raleway:wght@500&family=Teko&display=swap");
+
+// reset and default
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  // height: 1000px;
+  background-color: #0f172a;
+  font-family: "Raleway", sans-serif;
+}
+
+// COLOR VARIABLE
+$primary-color: #29cbef;
+$secondary-color: #201f1f;
+$text-color: #fff;
+
+// INTRO
+.box-intro {
+  @include i.box-intro();
+  .logo-intro {
+    @include i.logo();
+    z-index: -1;
+  }
+  h2 {
+    @include i.text();
+    z-index: -1;
+  }
+}
+
+// HEADER
+.container {
+  max-height: 100%;
+  .header {
+    @include h.bg-head();
+    .bg-image {
+      @include h.bg-image();
+    }
+  }
+}
+
+@include h.mainHeader();
+
+.left-content {
+  @include h.leftContent();
+}
+
+.right-content {
+  @include h.rightContent();
+}
+
+// NAVBAR CSS
+@include n.navbarMenu();
+
+// ABOUT ME
+@include ab.aboutMe();
+
+// ANIMATION CSS
+@include a.allAnimation();
+
+// RESPONSIVE CSS
+@include r.sizeRes();

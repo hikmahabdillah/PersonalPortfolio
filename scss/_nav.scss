@@ -1,0 +1,95 @@
+@mixin navbarMenu {
+  nav {
+    display: flex;
+    justify-content: space-between;
+    /* padding: 20px 0px; */
+    align-items: center;
+    color: rgb(194, 194, 248);
+    margin-bottom: 2.5%;
+    width: 100%;
+    box-sizing: border-box;
+    // position: fixed;
+    // top: 0;
+    // left: 0;
+    // z-index: 99;
+    // backdrop-filter: blur(4px);
+    // border-bottom-color: rgba(255, 255, 255, 0.432);
+  }
+
+  .brand img {
+    padding-left: 20px;
+    max-width: 100px;
+    aspect-ratio: 1 /1;
+    /* align-self: center; */
+  }
+
+  nav ul {
+    display: flex;
+    list-style: none;
+    width: 50%;
+    align-self: center;
+    justify-content: space-evenly;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    font-size: 0.9em;
+    transition: 0.5s;
+    align-self: center;
+    border-bottom: 2px solid rgba(114, 108, 108, 0);
+    border-radius: 2px;
+    display: block;
+  }
+
+  nav ul li a:hover {
+    color: #fff;
+    border-bottom: 2px solid rgb(255, 248, 248);
+    transform: scale(1.1);
+    border-radius: 2px;
+  }
+
+  /* Hamburger menu */
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 3px;
+    transition: all 0.5s;
+  }
+
+  /* Hamburger menu animation */
+
+  .menu-toggle span:nth-child(2) {
+    /* untuk menentukan poros dipojok kiri */
+    transform-origin: 0 0;
+  }
+  .menu-toggle span:nth-child(4) {
+    /* untuk menentukan poros dipojok kanan */
+    transform-origin: 0 100%;
+  }
+  /* jika input pada class menu toglgle dicheck, maka cari css yang merupakan sibling yang merupakan span yang merupakan anak ke-2 */
+  .menu-toggle input:checked ~ span:nth-child(2) {
+    transform: rotate(45deg) translate(-1px, -1px);
+    background-color: #fff;
+  }
+  .menu-toggle input:checked ~ span:nth-child(3) {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  .menu-toggle input:checked ~ span:nth-child(4) {
+    transform: rotate(-45deg) translate(-1px, 0);
+    background-color: #fff;
+  }
+}
