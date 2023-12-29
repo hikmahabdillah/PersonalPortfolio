@@ -18,19 +18,6 @@
   background-blend-mode: color-dodge !important;
 }
 
-@mixin bg-image {
-  position: absolute;
-  top: 0;
-  right: 0;
-  max-width: 705px !important;
-  // max-width: 100% !important;
-  max-height: 100%;
-  aspect-ratio: 1/1;
-  object-fit: cover;
-  z-index: -1;
-  filter: opacity(0.5);
-}
-
 @mixin mainHeader {
   .main-header {
     display: flex;
@@ -50,35 +37,45 @@
     display: flex;
     flex-direction: column;
     justify-content: start;
-    h3 {
-      background-color: #29cbef;
-      text-align: center;
-      max-width: 500px;
+    div.role {
+      display: flex;
     }
-    p {
-      color: #fff;
-      font-family: "Poppins", sans-serif;
-      max-width: 450px;
-      margin: 20px 0px;
-      padding-left: 20px;
-      font-size: 1.05em;
-      border-left: 2px solid #fff;
+    div.bord {
+      border-left: 4px solid #fff;
+    }
+    span {
+      display: flex;
+      border: 4px solid #fff;
+      padding: 5px 30px;
+      margin-left: 10px;
+      max-width: 300px;
+
+      h3 {
+        color: #f0f0f0;
+      }
     }
     h2 {
+      border-left: 4px solid #fff;
+      padding-left: 10px;
       font-size: 2em;
       color: #fff;
-      font-weight: normal !important;
+      // font-weight: normal !important;
+      font-family: "Mulish", sans-serif;
+      height: 1.1em;
     }
     h1 {
+      border-left: 4px solid #fff;
+      padding-left: 10px;
       font-size: 3em;
-      color: #29cbef;
+      // color: #29cbef;
+      background: linear-gradient(to right, #0159de, #29cbef);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
       font-weight: 800;
-      margin-bottom: 10px;
       &::before {
         content: "I'M ";
-        -webkit-text-stroke: 1px white;
-        -moz-text-stroke: 1px white;
-        color: #201f1f00;
+        color: #f0f0f0 !important;
       }
     }
     button {
@@ -86,11 +83,13 @@
       font-weight: bold;
       color: #fff;
       padding: 10px;
-      border-radius: 50px;
+      margin-top: 20px;
+      border-radius: 10px;
       border: 3px solid #29cbef;
       max-width: 125px;
       // max-width: 150px;
-      background-color: #201f1f00;
+      // background-color: #29cbef;
+      background: linear-gradient(to left, #0159de, #29cbef);
       transition: 0.5s;
       a {
         width: 125px;
@@ -98,12 +97,9 @@
         color: #fff;
       }
       &:hover {
-        background-color: #29cbef;
+        background-color: #201f1f00;
         border: 3px solid #fff;
         transform: scale(1.05);
-        a {
-          color: #0a1838;
-        }
       }
     }
   }
