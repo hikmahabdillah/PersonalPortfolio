@@ -93,8 +93,9 @@ body {
 .left-content .greeting span {
   display: flex;
   border: 4px solid #fff;
-  padding: 5px 30px;
-  margin-left: 10px;
+  border-bottom-right-radius: 100px;
+  padding: 5px 50px 5px 30px;
+  margin-left: 15px;
   max-width: 300px;
 }
 .left-content .greeting span h3 {
@@ -102,7 +103,7 @@ body {
 }
 .left-content .greeting h2 {
   border-left: 4px solid #fff;
-  padding-left: 10px;
+  padding-left: 15px;
   font-size: 2em;
   color: #fff;
   font-family: "Mulish", sans-serif;
@@ -110,7 +111,7 @@ body {
 }
 .left-content .greeting h1 {
   border-left: 4px solid #fff;
-  padding-left: 10px;
+  padding-left: 15px;
   font-size: 3em;
   background: linear-gradient(to right, #0159de, #29cbef);
   -webkit-background-clip: text;
@@ -129,9 +130,9 @@ body {
   padding: 10px;
   margin-top: 20px;
   border-radius: 10px;
-  border: 3px solid #29cbef;
+  border: 3px solid rgba(41, 203, 239, 0);
   max-width: 125px;
-  background: linear-gradient(to left, #0159de, #29cbef);
+  background: linear-gradient(to right bottom, #0159de, #29cbef);
   transition: 0.5s;
 }
 .left-content .greeting button a {
@@ -149,7 +150,8 @@ body {
   text-align: center;
 }
 .right-content img {
-  max-height: 400px;
+  padding: 25px;
+  max-height: 350px;
   max-width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
