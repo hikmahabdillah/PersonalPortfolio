@@ -97,35 +97,108 @@
           </div>
         </div>
       </section>
+
+      <!-- MY SKILLS -->
+      <section id="skills" class="skills">
+        <h2>My Skills</h2>
+        <div class="opsi">
+          <span><p>Tech Stack</p></span>
+          <span><p>Tools</p></span>
+        </div>
+        <div class="listSkills">
+          <div class="minicard">
+            <img src="img/Html 5.png" alt="html" width="60px" height="60px">
+            <span class="mskill">
+            <h3>HTML</h3>
+            <p>Advanced</p>
+          </span>
+          </div>
+          <div class="minicard">
+            <img src="img/Html 5.png" alt="html" width="60px" height="60px">
+            <span class="mskill">
+            <h3>HTML</h3>
+            <p>Advanced</p>
+          </span>
+          </div>
+          <div class="minicard">
+            <img src="img/Html 5.png" alt="html" width="60px" height="60px">
+            <span class="mskill">
+            <h3>HTML</h3>
+            <p>Advanced</p>
+          </span>
+          </div>
+          <div class="minicard">
+            <img src="img/Html 5.png" alt="html" width="60px" height="60px">
+            <span class="mskill">
+            <h3>HTML</h3>
+            <p>Advanced</p>
+          </span>
+          </div>
+          <div class="minicard">
+            <img src="img/Html 5.png" alt="html" width="60px" height="60px">
+            <span class="mskill">
+            <h3>HTML</h3>
+            <p>Advanced</p>
+          </span>
+          </div>
+          <div class="minicard">
+            <img src="img/Html 5.png" alt="html" width="60px" height="60px">
+            <span class="mskill">
+            <h3>HTML</h3>
+            <p>Advanced</p>
+          </span>
+          </div>
+          <div class="minicard">
+            <img src="img/Html 5.png" alt="html" width="60px" height="60px">
+            <span class="mskill">
+            <h3>HTML</h3>
+            <p>Advanced</p>
+          </span>
+          </div>
+          <div class="minicard">
+            <img src="img/Html 5.png" alt="html" width="60px" height="60px">
+            <span class="mskill">
+            <h3>HTML</h3>
+            <p>Advanced</p>
+          </span>
+          </div>
+          
+        </div>
+      </section>
     </div>
     <script>
+      // NAVBAR
       const menuToggle = document.querySelector(".menu-toggle input");
       const nav = document.querySelector("nav ul");
       menuToggle.addEventListener("click", function () {
         nav.classList.toggle("slide");
       });
 
+      // skill span
+
+      // ANIMATION EFFECT ON SCROLL AT NAV
       window.addEventListener("scroll", function () {
         let header = document.querySelector("nav");
         header.classList.toggle("sticky", window.scrollY > 0);
       });
 
       const navbar = document.getElementById('navbar');
-let prevScrollPos = window.pageYOffset;
+      let prevScrollPos = window.pageYOffset;
 
-window.onscroll = function() {
-  const currentScrollPos = window.pageYOffset;
+      window.onscroll = function() {
+        const currentScrollPos = window.pageYOffset;
 
-  if (prevScrollPos > currentScrollPos) {
-    // Munculkan navbar saat scroll ke atas
-    navbar.style.transform = 'translateY(0)';
-  } else {
-    // Hilangkan navbar saat scroll ke bawah
-    navbar.style.transform = 'translateY(-100%)';
-  }
+        if (prevScrollPos > currentScrollPos) {
+          // Munculkan navbar saat scroll ke atas
+          navbar.style.transform = 'translateY(0)';
+        } else {
+          // Hilangkan navbar saat scroll ke bawah
+          navbar.style.transform = 'translateY(-100%)';
+        }
 
-  prevScrollPos = currentScrollPos;
-};
+        prevScrollPos = currentScrollPos;
+      };
+
     </script>
   </body>
 </html>

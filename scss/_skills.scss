@@ -1,0 +1,79 @@
+@mixin mySkills {
+  section {
+    background-color: #0a1838;
+    &.skills {
+      padding: 50px;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      gap: 50px;
+      // justify-content: space-evenly;
+      align-items: center;
+      h2 {
+        color: #f0f0f0;
+        text-align: center;
+        font-size: 3em;
+        padding-bottom: 10px;
+        border-bottom: 3px solid #2978ef;
+      }
+      .opsi {
+        display: flex;
+        flex-direction: row;
+        align-self: start;
+        gap: 10px;
+        span {
+          cursor: pointer;
+          padding: 15px;
+          width: 100px;
+          background-color: #132e6c;
+          border-radius: 5px;
+          &:last-child {
+            background-color: transparent;
+            p {
+              color: #f0f0f0;
+              font-weight: normal;
+            }
+          }
+          p {
+            color: #29cbef;
+            font-weight: bold;
+            text-align: center;
+          }
+        }
+      }
+
+      .listSkills {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px;
+        .minicard {
+          display: flex;
+          padding: 10px;
+          gap: 15px;
+          background-color: #f0f0f0;
+          border-radius: 5px;
+          width: 250px;
+          align-items: center;
+          border-left: 5px solid #ef5929;
+          // width: 100%;
+          img {
+            border-radius: 50%;
+            border: 2px solid #ef5929;
+            object-fit: cover;
+            object-position: center;
+          }
+          span.mskill {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+            p {
+              color: #737373;
+            }
+          }
+        }
+      }
+    }
+  }
+}

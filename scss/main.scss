@@ -4,6 +4,7 @@
 @use "animation" as a;
 @use "nav" as n;
 @use "about" as ab;
+@use "skills" as ms;
 
 html {
   scroll-behavior: smooth;
@@ -64,6 +65,9 @@ $text-color: #fff;
 
 // ABOUT ME
 @include ab.aboutMe();
+
+//
+@include ms.mySkills();
 
 // ANIMATION CSS
 @include a.allAnimation();

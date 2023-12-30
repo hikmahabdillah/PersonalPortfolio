@@ -200,6 +200,10 @@ nav ul {
   justify-content: space-evenly;
 }
 
+nav ul li {
+  height: 20px;
+}
+
 nav ul li a {
   text-decoration: none;
   color: rgb(255, 255, 255);
@@ -217,6 +221,10 @@ nav ul li a:hover {
   border-bottom: 2px solid rgb(255, 248, 248);
   transform: scale(1.1);
   border-radius: 2px;
+}
+
+menu-item a.active {
+  color: #ff6600; /* Warna aktif */
 }
 
 .switch-container {
@@ -305,7 +313,7 @@ section {
   background-color: #0a1838;
 }
 section.about {
-  padding: 140px 30px;
+  padding: 100px 30px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -388,7 +396,7 @@ section.about .right-about .main-about p {
   font-size: 1.05em;
   margin: 0px 0px 20px;
   padding-bottom: 20px;
-  border-bottom: 2px solid #29cbef;
+  border-bottom: 2px solid #125f71;
 }
 section.about .right-about .main-about button {
   font-family: "Poppins", sans-serif;
@@ -404,6 +412,83 @@ section.about .right-about .main-about button:hover {
   background-color: #fff;
   color: #0b62d5;
   transform: scale(1.05);
+}
+
+section {
+  background-color: #0a1838;
+}
+section.skills {
+  padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+}
+section.skills h2 {
+  color: #f0f0f0;
+  text-align: center;
+  font-size: 3em;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #2978ef;
+}
+section.skills .opsi {
+  display: flex;
+  flex-direction: row;
+  align-self: start;
+  gap: 10px;
+}
+section.skills .opsi span {
+  cursor: pointer;
+  padding: 15px;
+  width: 100px;
+  background-color: #132e6c;
+  border-radius: 5px;
+}
+section.skills .opsi span:last-child {
+  background-color: transparent;
+}
+section.skills .opsi span:last-child p {
+  color: #f0f0f0;
+  font-weight: normal;
+}
+section.skills .opsi span p {
+  color: #29cbef;
+  font-weight: bold;
+  text-align: center;
+}
+section.skills .listSkills {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+section.skills .listSkills .minicard {
+  display: flex;
+  padding: 10px;
+  gap: 15px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  width: 250px;
+  align-items: center;
+  border-left: 5px solid #ef5929;
+}
+section.skills .listSkills .minicard img {
+  border-radius: 50%;
+  border: 2px solid #ef5929;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+section.skills .listSkills .minicard span.mskill {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+section.skills .listSkills .minicard span.mskill p {
+  color: #737373;
 }
 
 @keyframes upndown {

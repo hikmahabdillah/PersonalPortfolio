@@ -37,6 +37,10 @@
     justify-content: space-evenly;
   }
 
+  nav ul li {
+    height: 20px;
+  }
+
   nav ul li a {
     text-decoration: none;
     color: rgb(255, 255, 255);
@@ -54,6 +58,10 @@
     border-bottom: 2px solid rgb(255, 248, 248);
     transform: scale(1.1);
     border-radius: 2px;
+  }
+
+  menu-item a.active {
+    color: #ff6600; /* Warna aktif */
   }
 
   .switch-container {
