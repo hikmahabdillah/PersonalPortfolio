@@ -2,28 +2,33 @@
   nav {
     display: flex;
     justify-content: space-between;
-    /* padding: 20px 0px; */
     align-items: center;
     color: rgb(194, 194, 248);
     margin-bottom: 2.5%;
     width: 100%;
     box-sizing: border-box;
-    // position: fixed;
-    // top: 0;
-    // left: 0;
-    // z-index: 99;
-    // backdrop-filter: blur(4px);
-    // border-bottom-color: rgba(255, 255, 255, 0.432);
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: 0.6s;
+    z-index: 99;
+  }
+
+  nav.sticky {
+    backdrop-filter: blur(5px);
+    border-bottom-color: rgba(255, 255, 255, 0.432);
   }
 
   .brand img {
     padding-left: 20px;
     max-width: 100px;
     aspect-ratio: 1 /1;
+    position: relative;
     /* align-self: center; */
   }
 
   nav ul {
+    position: relative;
     display: flex;
     list-style: none;
     width: 50%;
@@ -48,6 +53,46 @@
     border-bottom: 2px solid rgb(255, 248, 248);
     transform: scale(1.1);
     border-radius: 2px;
+  }
+
+  .switch-container {
+    display: flex;
+    gap: 5px;
+  }
+
+  .switch-input {
+    display: none;
+  }
+
+  .switch-label {
+    display: block;
+    width: 50px;
+    height: 25px;
+    background-color: #ddd;
+    border-radius: 15px;
+    // position: absolute;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .switch-input:checked + .switch-label {
+    background-color: #0a1838; /* warna ketika tombol switch aktif */
+  }
+
+  .switch-label::before {
+    content: "";
+    display: block;
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s;
+  }
+
+  .switch-input:checked + .switch-label::before {
+    transform: translateX(
+      25px
+    ); /* menggerakkan bulatan ke kanan saat tombol switch aktif */
   }
 
   /* Hamburger menu */

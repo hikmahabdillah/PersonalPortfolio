@@ -44,7 +44,7 @@ $text-color: #fff;
 // HEADER
 .container {
   max-height: 100%;
-  .header {
+  header {
     @include h.bg-head();
   }
 }

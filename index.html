@@ -18,8 +18,8 @@
     </div>
     <div class="container">
       <!-- HEADER -->
-      <div class="header">
-        <nav class="menu">
+      <header>
+        <nav class="menu" id="navbar">
           <div class="brand">
             <img src="img/h44-wpng 2.png" alt="" />
           </div>
@@ -29,7 +29,24 @@
             <li><a href="#experiences">Experiences</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
-            <input type="checkbox" />
+            <div class="switch-container">
+              <span
+                ><img
+                  src="img/icons8-sun-30.png"
+                  alt="sun icon"
+                  width="25px"
+                  height="25px"
+              /></span>
+              <input type="checkbox" id="switch" class="switch-input" checked />
+              <label for="switch" class="switch-label"> </label>
+              <span
+                ><img
+                  src="img/icons8-moon-30.png"
+                  alt="moon icon"
+                  width="25px"
+                  height="25px"
+              /></span>
+            </div>
           </ul>
           <div class="menu-toggle">
             <input type="checkbox" name="" id="" />
@@ -54,7 +71,7 @@
           <div class="right-content">
             <img src="img/20230714_221356.png" alt="logo" loading="eager" />
           </div>
-        </div>
+        </header>
       </div>
 
       <!-- ABOUT ME -->
@@ -87,6 +104,28 @@
       menuToggle.addEventListener("click", function () {
         nav.classList.toggle("slide");
       });
+
+      window.addEventListener("scroll", function () {
+        let header = document.querySelector("nav");
+        header.classList.toggle("sticky", window.scrollY > 0);
+      });
+
+      const navbar = document.getElementById('navbar');
+let prevScrollPos = window.pageYOffset;
+
+window.onscroll = function() {
+  const currentScrollPos = window.pageYOffset;
+
+  if (prevScrollPos > currentScrollPos) {
+    // Munculkan navbar saat scroll ke atas
+    navbar.style.transform = 'translateY(0)';
+  } else {
+    // Hilangkan navbar saat scroll ke bawah
+    navbar.style.transform = 'translateY(-100%)';
+  }
+
+  prevScrollPos = currentScrollPos;
+};
     </script>
   </body>
 </html>
