@@ -179,6 +179,7 @@ nav {
 nav.sticky {
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
+  background-color: rgba(13, 32, 77, 0.7960784314);
   border-bottom-color: rgba(255, 255, 255, 0.432);
 }
 
