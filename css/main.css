@@ -442,29 +442,88 @@ section.skills .opsi span {
   cursor: pointer;
   padding: 15px;
   width: 100px;
-  background-color: #132e6c;
-  border-radius: 5px;
-}
-section.skills .opsi span:last-child {
   background-color: transparent;
+  border-radius: 5px;
+  transition: 0.5s;
 }
-section.skills .opsi span:last-child p {
-  color: #f0f0f0;
-  font-weight: normal;
+section.skills .opsi span.selected {
+  background-color: #132e6c;
 }
-section.skills .opsi span p {
+section.skills .opsi span.selected p {
   color: #29cbef;
   font-weight: bold;
+}
+section.skills .opsi span p {
+  font-weight: normal;
+  color: #f0f0f0;
   text-align: center;
 }
-section.skills .listSkills {
+section.skills .listTools {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   gap: 40px;
+  transition: 1s;
 }
-section.skills .listSkills .minicard {
+section.skills .listTools .minicard {
+  display: flex;
+  padding: 10px;
+  gap: 15px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  width: 250px;
+  align-items: center;
+  border-left: 5px solid #2978ef;
+  transition: 0.5s;
+}
+section.skills .listTools .minicard:hover img {
+  transform: scale(1.1);
+}
+section.skills .listTools .minicard:nth-child(2) {
+  border-left: 5px solid #00a607;
+}
+section.skills .listTools .minicard:nth-child(2) img {
+  border: 2px solid #00a607;
+}
+section.skills .listTools .minicard:nth-child(3) {
+  border-left: 5px solid #ef5929;
+}
+section.skills .listTools .minicard:nth-child(3) img {
+  border: 2px solid #ef5929;
+}
+section.skills .listTools .minicard:nth-child(4) {
+  border-left: 5px solid #616161;
+}
+section.skills .listTools .minicard:nth-child(4) img {
+  border: 2px solid #616161;
+}
+section.skills .listTools .minicard img {
+  border-radius: 50%;
+  border: 2px solid #2978ef;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  transition: 0.5s;
+}
+section.skills .listTools .minicard span.mskill {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+section.skills .listTools .minicard span.mskill p {
+  color: #737373;
+}
+section.skills .listTech {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  transition: 1s;
+}
+section.skills .listTech .minicard {
   display: flex;
   padding: 10px;
   gap: 15px;
@@ -473,21 +532,92 @@ section.skills .listSkills .minicard {
   width: 250px;
   align-items: center;
   border-left: 5px solid #ef5929;
+  transition: 0.5s;
 }
-section.skills .listSkills .minicard img {
+section.skills .listTech .minicard:hover img {
+  transform: scale(1.1);
+}
+section.skills .listTech .minicard:nth-child(2) {
+  border-left: 5px solid #2978ef;
+}
+section.skills .listTech .minicard:nth-child(2) img {
+  border: 2px solid #2978ef;
+}
+section.skills .listTech .minicard:nth-child(3) {
+  border-left: 5px solid #d6ce0f;
+}
+section.skills .listTech .minicard:nth-child(3) img {
+  border: 2px solid #d6ce0f;
+}
+section.skills .listTech .minicard:nth-child(4) {
+  border-left: 5px solid #ff5baa;
+}
+section.skills .listTech .minicard:nth-child(4) img {
+  border: 2px solid #ff5baa;
+}
+section.skills .listTech .minicard:nth-child(5) {
+  border-left: 5px solid #b395f3;
+}
+section.skills .listTech .minicard:nth-child(5) img {
+  border: 2px solid #b395f3;
+}
+section.skills .listTech .minicard:nth-child(6) {
+  border-left: 5px solid #db643e;
+}
+section.skills .listTech .minicard:nth-child(6) img {
+  border: 2px solid #db643e;
+}
+section.skills .listTech .minicard:nth-child(7) {
+  border-left: 5px solid #2960ef;
+}
+section.skills .listTech .minicard:nth-child(7) img {
+  border: 2px solid #2960ef;
+}
+section.skills .listTech .minicard:nth-child(8) {
+  border-left: 5px solid #8550f5;
+}
+section.skills .listTech .minicard:nth-child(8) img {
+  border: 2px solid #8550f5;
+}
+section.skills .listTech .minicard:nth-child(9) {
+  border-left: 5px solid #2978ef;
+}
+section.skills .listTech .minicard:nth-child(9) img {
+  border: 2px solid #2978ef;
+}
+section.skills .listTech .minicard:nth-child(10) {
+  border-left: 5px solid #00a607;
+}
+section.skills .listTech .minicard:nth-child(10) img {
+  border: 2px solid #00a607;
+}
+section.skills .listTech .minicard:nth-child(11) {
+  border-left: 5px solid #ef5929;
+}
+section.skills .listTech .minicard:nth-child(11) img {
+  border: 2px solid #ef5929;
+}
+section.skills .listTech .minicard:nth-child(12) {
+  border-left: 5px solid #616161;
+}
+section.skills .listTech .minicard:nth-child(12) img {
+  border: 2px solid #616161;
+}
+section.skills .listTech .minicard img {
   border-radius: 50%;
   border: 2px solid #ef5929;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+  transition: 0.5s;
 }
-section.skills .listSkills .minicard span.mskill {
+section.skills .listTech .minicard span.mskill {
   display: flex;
   flex-direction: column;
   gap: 3px;
 }
-section.skills .listSkills .minicard span.mskill p {
+section.skills .listTech .minicard span.mskill p {
   color: #737373;
 }
 

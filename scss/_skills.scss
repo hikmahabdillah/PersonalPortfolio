@@ -25,29 +25,92 @@
           cursor: pointer;
           padding: 15px;
           width: 100px;
-          background-color: #132e6c;
+          background-color: transparent;
           border-radius: 5px;
-          &:last-child {
-            background-color: transparent;
+          transition: 0.5s;
+          &.selected {
+            background-color: #132e6c;
             p {
-              color: #f0f0f0;
-              font-weight: normal;
+              color: #29cbef;
+              font-weight: bold;
             }
           }
           p {
-            color: #29cbef;
-            font-weight: bold;
+            font-weight: normal;
+            color: #f0f0f0;
             text-align: center;
           }
         }
       }
 
-      .listSkills {
+      .listTools {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
         gap: 40px;
+        transition: 1s;
+        .minicard {
+          display: flex;
+          padding: 10px;
+          gap: 15px;
+          background-color: #f0f0f0;
+          border-radius: 5px;
+          width: 250px;
+          align-items: center;
+          border-left: 5px solid #2978ef;
+          transition: 0.5s;
+          &:hover {
+            img {
+              transform: scale(1.1);
+            }
+          }
+
+          // css card
+          &:nth-child(2) {
+            border-left: 5px solid #00a607;
+            img {
+              border: 2px solid #00a607;
+            }
+          }
+          &:nth-child(3) {
+            border-left: 5px solid #ef5929;
+            img {
+              border: 2px solid #ef5929;
+            }
+          }
+          &:nth-child(4) {
+            border-left: 5px solid #616161;
+            img {
+              border: 2px solid #616161;
+            }
+          }
+
+          img {
+            border-radius: 50%;
+            border: 2px solid #2978ef;
+            object-fit: cover;
+            object-position: center;
+            transition: 0.5s;
+          }
+          span.mskill {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+            p {
+              color: #737373;
+            }
+          }
+        }
+      }
+
+      .listTech {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px;
+        transition: 1s;
         .minicard {
           display: flex;
           padding: 10px;
@@ -57,12 +120,86 @@
           width: 250px;
           align-items: center;
           border-left: 5px solid #ef5929;
-          // width: 100%;
+          transition: 0.5s;
+          &:hover {
+            img {
+              transform: scale(1.1);
+            }
+          }
+          // css card
+          &:nth-child(2) {
+            border-left: 5px solid #2978ef;
+            img {
+              border: 2px solid #2978ef;
+            }
+          }
+          &:nth-child(3) {
+            border-left: 5px solid #d6ce0f;
+            img {
+              border: 2px solid #d6ce0f;
+            }
+          }
+          &:nth-child(4) {
+            border-left: 5px solid #ff5baa;
+            img {
+              border: 2px solid #ff5baa;
+            }
+          }
+          &:nth-child(5) {
+            border-left: 5px solid #b395f3;
+            img {
+              border: 2px solid #b395f3;
+            }
+          }
+          &:nth-child(6) {
+            border-left: 5px solid #db643e;
+            img {
+              border: 2px solid #db643e;
+            }
+          }
+          &:nth-child(7) {
+            border-left: 5px solid #2960ef;
+            img {
+              border: 2px solid #2960ef;
+            }
+          }
+          &:nth-child(8) {
+            border-left: 5px solid #8550f5;
+            img {
+              border: 2px solid #8550f5;
+            }
+          }
+          &:nth-child(9) {
+            border-left: 5px solid #2978ef;
+            img {
+              border: 2px solid #2978ef;
+            }
+          }
+          &:nth-child(10) {
+            border-left: 5px solid #00a607;
+            img {
+              border: 2px solid #00a607;
+            }
+          }
+          &:nth-child(11) {
+            border-left: 5px solid #ef5929;
+            img {
+              border: 2px solid #ef5929;
+            }
+          }
+          &:nth-child(12) {
+            border-left: 5px solid #616161;
+            img {
+              border: 2px solid #616161;
+            }
+          }
+
           img {
             border-radius: 50%;
             border: 2px solid #ef5929;
             object-fit: cover;
             object-position: center;
+            transition: 0.5s;
           }
           span.mskill {
             display: flex;

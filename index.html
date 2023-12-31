@@ -102,67 +102,94 @@
       <section id="skills" class="skills">
         <h2>My Skills</h2>
         <div class="opsi">
-          <span><p>Tech Stack</p></span>
-          <span><p>Tools</p></span>
+          <span  class="clickable-span" id="techS" onclick="handleClick()"><p>Tech Stack</p></span>
+          <span  class="clickable-span" id="tools" onclick="handleClick()" ><p>Tools</p></span>
         </div>
-        <div class="listSkills">
+        <div class="listTech" id="listTech" >
           <div class="minicard">
-            <img src="img/Html 5.png" alt="html" width="60px" height="60px">
+            <img src="img/Html 5.png" alt="html" width="55px" height="55px">
             <span class="mskill">
             <h3>HTML</h3>
             <p>Advanced</p>
           </span>
           </div>
           <div class="minicard">
-            <img src="img/Html 5.png" alt="html" width="60px" height="60px">
+            <img src="img/CSS3.png" alt="html" width="55px" height="55px">
             <span class="mskill">
-            <h3>HTML</h3>
+            <h3>CSS</h3>
             <p>Advanced</p>
           </span>
           </div>
           <div class="minicard">
-            <img src="img/Html 5.png" alt="html" width="60px" height="60px">
+            <img src="img/JavaScript.png" alt="html" width="60px" height="60px">
             <span class="mskill">
-            <h3>HTML</h3>
-            <p>Advanced</p>
+            <h3>JavaScript</h3>
+            <p>Basic</p>
           </span>
           </div>
           <div class="minicard">
-            <img src="img/Html 5.png" alt="html" width="60px" height="60px">
+            <img src="img/Sass.png" alt="html" width="60px" height="60px">
             <span class="mskill">
-            <h3>HTML</h3>
-            <p>Advanced</p>
+            <h3>Sass | Scss</h3>
+            <p>Intermediate</p>
           </span>
           </div>
           <div class="minicard">
-            <img src="img/Html 5.png" alt="html" width="60px" height="60px">
+            <img src="img/PHP Logo.png" alt="html" width="60px" height="60px">
             <span class="mskill">
-            <h3>HTML</h3>
-            <p>Advanced</p>
+            <h3>PHP</h3>
+            <p>Intermediate</p>
           </span>
           </div>
           <div class="minicard">
-            <img src="img/Html 5.png" alt="html" width="60px" height="60px">
+            <img src="img/MySQL Logo.png" alt="html" width="60px" height="60px">
             <span class="mskill">
-            <h3>HTML</h3>
-            <p>Advanced</p>
+            <h3>MySql</h3>
+            <p>Intermediate</p>
           </span>
           </div>
           <div class="minicard">
-            <img src="img/Html 5.png" alt="html" width="60px" height="60px">
+            <img src="img/Java.png" alt="html" width="60px" height="60px">
             <span class="mskill">
-            <h3>HTML</h3>
-            <p>Advanced</p>
+            <h3>Java</h3>
+            <p>Basic</p>
           </span>
           </div>
           <div class="minicard">
-            <img src="img/Html 5.png" alt="html" width="60px" height="60px">
+            <img src="img/Bootstrap.png" alt="html" width="60px" height="60px">
             <span class="mskill">
-            <h3>HTML</h3>
-            <p>Advanced</p>
+            <h3>Bootstrap</h3>
+            <p>Intermediate</p>
           </span>
           </div>
           
+        </div>
+
+        <div class="listTools" id="listTools">
+          <div class="minicard">
+            <img src="img/Visual Studio Code 2020.png" alt="html" width="55px" height="55px">
+            <span class="mskill">
+            <h3>Visual Studio Code</h3>
+          </span>
+          </div>
+          <div class="minicard">
+            <img src="img/Figma.png" alt="html" width="55px" height="55px">
+            <span class="mskill">
+            <h3>Figma</h3>
+          </span>
+          </div>
+          <div class="minicard">
+            <img src="img/Git.png" alt="html" width="55px" height="55px">
+            <span class="mskill">
+            <h3>Git</h3>
+          </span>
+          </div>
+          <div class="minicard">
+            <img src="img/github icon.png" alt="html" width="55px" height="55px">
+            <span class="mskill">
+            <h3>Github</h3>
+          </span>
+          </div>
         </div>
       </section>
     </div>
@@ -175,7 +202,39 @@
       });
 
       // skill span
+      function handleClick() {
 
+      var spans = document.querySelectorAll('.clickable-span');
+
+      spans.forEach(function(span) {
+        span.classList.remove('selected');
+      });
+
+      event.currentTarget.classList.add('selected');
+
+    }
+    let tech = document.getElementById('techS');
+    let tool = document.getElementById('tools');
+    let ltech = document.getElementById('listTech');
+    let ltool = document.getElementById('listTools');
+
+    window.onload = function() {
+    tech.click();
+    ltool.style.display = 'none';
+    }
+
+    tech.addEventListener('click', function() {
+      ltool.style.display = 'none';
+      ltech.style.display = 'flex';
+    });
+
+
+    tool.addEventListener('click', function() {
+      ltech.style.display = 'none';
+      ltool.style.display = 'flex';
+
+  });
+    
       // ANIMATION EFFECT ON SCROLL AT NAV
       window.addEventListener("scroll", function () {
         let header = document.querySelector("nav");
