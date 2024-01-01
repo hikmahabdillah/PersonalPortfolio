@@ -201,6 +201,17 @@
         nav.classList.toggle("slide");
       });
 
+      // scrollbar
+      var customScrollbar = document.querySelector('body');
+
+      customScrollbar.addEventListener('mouseenter', function() {
+        this.style.overflowY = 'scroll';
+      });
+      
+      customScrollbar.addEventListener('mouseleave', function() {
+        this.style.overflowY = 'hidden';
+      });
+
       // skill span
       function handleClick() {
 

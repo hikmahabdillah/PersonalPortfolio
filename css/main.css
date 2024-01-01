@@ -1,5 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@800&family=Poppins:wght@200&family=Raleway:wght@800&family=Mulish:wght@500&family=Raleway:wght@500&family=Teko&display=swap");
+:root {
+  --dark-navy: #020c1b;
+  --navy: #15132a;
+}
+
 html {
+  -webkit-scroll-behavior: smooth;
+  -moz-scroll-behavior: smooth;
+  -ms-scroll-behavior: smooth;
   scroll-behavior: smooth;
 }
 
@@ -9,8 +17,33 @@ html {
 }
 
 body {
+  height: 100%;
   background-color: #0f172a;
   font-family: "Raleway", sans-serif;
+  -webkit-scrollbar-width: thin;
+  -moz-scrollbar-width: thin;
+  -ms-scrollbar-width: thin;
+  scrollbar-width: thin;
+  scrollbar-color: #0a1838 #00327c;
+  transition: overflow-y 0.5s ease;
+  overflow: hidden;
+  /*!sc*/
+  /*!sc*/
+}
+body:hover {
+  overflow-y: scroll;
+}
+body::-webkit-scrollbar {
+  width: 10px;
+}
+body::-webkit-scrollbar-track {
+  background: #0a1838;
+}
+body::-webkit-scrollbar-thumb {
+  opacity: 1;
+  background-color: #00327c;
+  border: 3px solid #0a1838;
+  border-radius: 10px;
 }
 
 .box-intro {
@@ -57,9 +90,9 @@ body {
   max-height: 100%;
 }
 .container header {
-  height: 90vh;
+  height: 100%;
   max-width: 100%;
-  padding: 10px 20px 52px;
+  padding: 10px 20px 70px;
   overflow-x: hidden !important;
   background: linear-gradient(90deg, rgba(44, 127, 146, 0) 10%, rgb(18, 112, 254) 100%);
   background-blend-mode: color-dodge !important;
@@ -71,6 +104,7 @@ body {
   justify-content: space-evenly;
   align-items: center;
   justify-self: center;
+  width: 100%;
   padding: 30px;
   padding-top: 130px;
 }

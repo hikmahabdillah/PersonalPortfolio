@@ -6,7 +6,14 @@
 @use "about" as ab;
 @use "skills" as ms;
 
+:root {
+  --dark-navy: #020c1b;
+  --navy: #15132a;
+}
 html {
+  -webkit-scroll-behavior: smooth;
+  -moz-scroll-behavior: smooth;
+  -ms-scroll-behavior: smooth;
   scroll-behavior: smooth;
 }
 
@@ -19,9 +26,36 @@ html {
   padding: 0;
 }
 body {
-  // height: 1000px;
+  height: 100%;
   background-color: #0f172a;
   font-family: "Raleway", sans-serif;
+  -webkit-scrollbar-width: thin;
+  -moz-scrollbar-width: thin;
+  -ms-scrollbar-width: thin;
+  scrollbar-width: thin;
+  scrollbar-color: #0a1838 #00327c;
+  transition: overflow-y 0.5s ease;
+  overflow: hidden;
+
+  &:hover {
+    overflow-y: scroll;
+  }
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /*!sc*/
+  &::-webkit-scrollbar-track {
+    background: #0a1838;
+  }
+
+  /*!sc*/
+  &::-webkit-scrollbar-thumb {
+    opacity: 1;
+    background-color: #00327c;
+    border: 3px solid #0a1838;
+    border-radius: 10px;
+  }
 }
 
 // COLOR VARIABLE

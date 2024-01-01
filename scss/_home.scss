@@ -1,7 +1,7 @@
 @mixin bg-head {
-  height: 90vh;
+  height: 100%;
   max-width: 100%;
-  padding: 10px 20px 52px;
+  padding: 10px 20px 70px;
   overflow-x: hidden !important;
   background: linear-gradient(
     90deg,
@@ -25,6 +25,7 @@
     justify-content: space-evenly;
     align-items: center;
     justify-self: center;
+    width: 100%;
     padding: 30px;
     padding-top: 130px;
   }
