@@ -42,6 +42,9 @@
           }
         }
       }
+      .listAll {
+        position: relative;
+      }
 
       .listTools {
         display: flex;
@@ -49,7 +52,11 @@
         flex-wrap: wrap;
         justify-content: center;
         gap: 40px;
-        transition: 1s;
+        transition: 0.3s;
+        position: absolute;
+        top: 0px;
+        left: 22.5px;
+
         .minicard {
           display: flex;
           padding: 10px;
@@ -110,7 +117,9 @@
         flex-wrap: wrap;
         justify-content: center;
         gap: 40px;
-        transition: 1s;
+        transition: 0.3s;
+        overflow: hidden;
+        max-width: 100%;
         .minicard {
           display: flex;
           padding: 10px;

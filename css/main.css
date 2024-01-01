@@ -25,13 +25,8 @@ body {
   -ms-scrollbar-width: thin;
   scrollbar-width: thin;
   scrollbar-color: #0a1838 #00327c;
-  transition: overflow-y 0.5s ease;
-  overflow: hidden;
   /*!sc*/
   /*!sc*/
-}
-body:hover {
-  overflow-y: scroll;
 }
 body::-webkit-scrollbar {
   width: 10px;
@@ -492,13 +487,19 @@ section.skills .opsi span p {
   color: #f0f0f0;
   text-align: center;
 }
+section.skills .listAll {
+  position: relative;
+}
 section.skills .listTools {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   gap: 40px;
-  transition: 1s;
+  transition: 0.3s;
+  position: absolute;
+  top: 0px;
+  left: 22.5px;
 }
 section.skills .listTools .minicard {
   display: flex;
@@ -555,7 +556,9 @@ section.skills .listTech {
   flex-wrap: wrap;
   justify-content: center;
   gap: 40px;
-  transition: 1s;
+  transition: 0.3s;
+  overflow: hidden;
+  max-width: 100%;
 }
 section.skills .listTech .minicard {
   display: flex;
