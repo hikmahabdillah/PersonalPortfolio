@@ -5,6 +5,7 @@
 @use "nav" as n;
 @use "about" as ab;
 @use "skills" as ms;
+@use "experiences" as ex;
 
 :root {
   --dark-navy: #020c1b;
@@ -95,8 +96,11 @@ $text-color: #fff;
 // ABOUT ME
 @include ab.aboutMe();
 
-//
+// MY SKILLS
 @include ms.mySkills();
+
+// EXPERIENCES
+@include ex.experiences();
 
 // ANIMATION CSS
 @include a.allAnimation();

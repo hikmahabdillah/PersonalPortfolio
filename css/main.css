@@ -480,7 +480,7 @@ section.skills .opsi span.selected {
 }
 section.skills .opsi span.selected p {
   color: #29cbef;
-  font-weight: bold;
+  font-weight: 600;
 }
 section.skills .opsi span p {
   font-weight: normal;
@@ -489,6 +489,9 @@ section.skills .opsi span p {
 }
 section.skills .listAll {
   position: relative;
+}
+section.skills .listAll h3 {
+  color: #0a1838;
 }
 section.skills .listTools {
   display: flex;
@@ -656,6 +659,29 @@ section.skills .listTech .minicard span.mskill {
 }
 section.skills .listTech .minicard span.mskill p {
   color: #737373;
+}
+
+section {
+  background-color: #0a1838;
+}
+section.experiences {
+  padding: 50px;
+  gap: 50px;
+}
+section.experiences h2 {
+  color: #f0f0f0;
+  font-size: 3em;
+  padding-bottom: 10px;
+}
+section.experiences h2::after {
+  content: "";
+  display: block;
+  position: relative;
+  top: -25px;
+  width: 72.5%;
+  left: 320px;
+  height: 3px;
+  background-color: #132e6c;
 }
 
 @keyframes upndown {

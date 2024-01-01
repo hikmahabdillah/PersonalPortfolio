@@ -1,0 +1,28 @@
+@mixin experiences {
+  section {
+    background-color: #0a1838;
+    &.experiences {
+      padding: 50px;
+      // display: flex;
+      // flex-wrap: wrap;
+      // flex-direction: column;
+      gap: 50px;
+      h2 {
+        color: #f0f0f0;
+        font-size: 3em;
+        padding-bottom: 10px;
+        &::after {
+          content: "";
+          display: block;
+          position: relative;
+          top: -25px;
+          width: 72.5%;
+          // margin-left: 300px;
+          left: 320px;
+          height: 3px;
+          background-color: #132e6c;
+        }
+      }
+    }
+  }
+}
