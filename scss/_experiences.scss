@@ -3,24 +3,62 @@
     background-color: #0a1838;
     &.experiences {
       padding: 50px;
-      // display: flex;
-      // flex-wrap: wrap;
-      // flex-direction: column;
-      gap: 50px;
-      h2 {
-        color: #f0f0f0;
-        font-size: 3em;
-        padding-bottom: 10px;
-        &::after {
-          content: "";
-          display: block;
-          position: relative;
-          top: -25px;
-          width: 72.5%;
-          // margin-left: 300px;
-          left: 320px;
-          height: 3px;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      .head-exp {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        margin: 0 70px;
+        h2 {
+          color: #f0f0f0;
+          font-size: 3em;
+          padding-bottom: 10px;
+        }
+        hr {
+          height: 1px;
+          width: 100%;
           background-color: #132e6c;
+          color: #132e6c;
+          border: 1px solid #132e6c;
+        }
+      }
+      .expage {
+        display: flex;
+        justify-content: space-evenly;
+        justify-self: center;
+        gap: 30px;
+        // max-width: 1000px;
+        margin: 30px 50px;
+        // margin-top: 30px;
+        flex-wrap: wrap;
+        .employment {
+          // flex: 1;
+          width: 350px;
+          ul {
+            list-style: none;
+            gap: 10px;
+            li {
+              padding: 20px;
+              border-left: 3px solid #233154;
+              &.active {
+                border-left: 3px solid #06acd4;
+                background-color: #074c5c;
+                a {
+                  color: #29cbef;
+                }
+              }
+              a {
+                text-decoration: none;
+                color: #f0f0f0;
+              }
+            }
+          }
+        }
+        .content-employ {
+          // flex: 1;
+          width: 550px;
         }
       }
     }
