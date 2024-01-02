@@ -674,7 +674,7 @@ section.experiences .head-exp {
   display: flex;
   gap: 20px;
   align-items: center;
-  margin: 0 70px;
+  margin: 0 30px;
 }
 section.experiences .head-exp h2 {
   color: #f0f0f0;
@@ -697,7 +697,7 @@ section.experiences .expage {
   flex-wrap: wrap;
 }
 section.experiences .expage .employment {
-  width: 350px;
+  max-width: 350px;
 }
 section.experiences .expage .employment ul {
   list-style: none;
@@ -719,7 +719,7 @@ section.experiences .expage .employment ul li a {
   color: #f0f0f0;
 }
 section.experiences .expage .content-employ {
-  width: 550px;
+  max-width: 550px;
 }
 
 @keyframes upndown {

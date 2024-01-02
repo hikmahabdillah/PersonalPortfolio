@@ -10,7 +10,7 @@
         display: flex;
         gap: 20px;
         align-items: center;
-        margin: 0 70px;
+        margin: 0 30px;
         h2 {
           color: #f0f0f0;
           font-size: 3em;
@@ -29,13 +29,13 @@
         justify-content: space-evenly;
         justify-self: center;
         gap: 30px;
-        // max-width: 1000px;
         margin: 30px 50px;
-        // margin-top: 30px;
         flex-wrap: wrap;
+        // max-width: 1000px;
+        // margin-top: 30px;
         .employment {
           // flex: 1;
-          width: 350px;
+          max-width: 350px;
           ul {
             list-style: none;
             gap: 10px;
@@ -58,7 +58,7 @@
         }
         .content-employ {
           // flex: 1;
-          width: 550px;
+          max-width: 550px;
         }
       }
     }
