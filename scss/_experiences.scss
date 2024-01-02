@@ -42,6 +42,7 @@
             li {
               padding: 20px;
               border-left: 3px solid #233154;
+              transition: 0.3s;
               &.active {
                 border-left: 3px solid #06acd4;
                 background-color: #074c5c;
@@ -58,19 +59,23 @@
         }
         .content-employ {
           // flex: 1;
+          transition: 1s;
           max-width: 550px;
           background-color: #091532;
           padding: 50px;
           border-radius: 10px;
           .content {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
+            // display: none;
+            // flex-direction: column;
+            // gap: 10px;
+            transform: scale(0);
+            filter: opacity(0);
+            height: 0;
             h3 {
               color: #f0f0f0;
               font-size: 1.5em;
               font-weight: normal;
-              max-width: 75%;
+              max-width: 85%;
             }
             span {
               p {
@@ -93,6 +98,14 @@
                 }
               }
             }
+          }
+          .act {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            transform: scale(1);
+            height: auto;
+            filter: opacity(1);
           }
         }
       }

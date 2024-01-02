@@ -20,12 +20,6 @@ let ltech = document.getElementById("listTech");
 let ltool = document.getElementById("listTools");
 let lall = document.getElementById("listAll");
 
-window.onload = function () {
-  tech.click();
-  // ltool.style.display = 'none';
-  ltool.style.transform = "scale(0)";
-};
-
 tech.addEventListener("click", function () {
   // ltool.style.display = 'none';
   // ltech.style.display = 'flex';
@@ -66,3 +60,50 @@ window.onscroll = function () {
 
   prevScrollPos = currentScrollPos;
 };
+
+// EXPERIENCES LI
+var listItems = document.querySelectorAll(".employment li");
+let smkn4 = document.getElementById("smkn4");
+let polinema = document.getElementById("polinema");
+let skipper = document.getElementById("skipperwebs");
+let liSmkn4 = document.getElementById("liSmkn4");
+let liPolinema = document.getElementById("liPolinema");
+let liSkipper = document.getElementById("liSkipper");
+
+// Menambahkan event listener untuk setiap elemen <li>
+window.onload = function () {
+  liSmkn4.click();
+
+  tech.click();
+  ltool.style.transform = "scale(0)";
+};
+
+liSmkn4.addEventListener("click", function () {
+  smkn4.classList.add("act");
+  polinema.classList.remove("act");
+  skipper.classList.remove("act");
+});
+
+liPolinema.addEventListener("click", function () {
+  smkn4.classList.remove("act");
+  polinema.classList.add("act");
+  skipper.classList.remove("act");
+});
+
+liSkipper.addEventListener("click", function () {
+  smkn4.classList.remove("act");
+  polinema.classList.remove("act");
+  skipper.classList.add("act");
+});
+
+listItems.forEach(function (li) {
+  li.addEventListener("click", function () {
+    // Menghapus kelas "active" dari semua elemen <li>
+    listItems.forEach(function (item) {
+      item.classList.remove("active");
+    });
+
+    // Menambahkan kelas "active" pada elemen <li> yang diklik
+    this.classList.add("active");
+  });
+});

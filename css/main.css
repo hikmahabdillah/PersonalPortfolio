@@ -502,7 +502,7 @@ section.skills .listTools {
   transition: 0.3s;
   position: absolute;
   top: 0px;
-  left: 22.5px;
+  left: 20px;
 }
 section.skills .listTools .minicard {
   display: flex;
@@ -706,6 +706,7 @@ section.experiences .expage .employment ul {
 section.experiences .expage .employment ul li {
   padding: 20px;
   border-left: 3px solid #233154;
+  transition: 0.3s;
 }
 section.experiences .expage .employment ul li.active {
   border-left: 3px solid #06acd4;
@@ -719,21 +720,22 @@ section.experiences .expage .employment ul li a {
   color: #f0f0f0;
 }
 section.experiences .expage .content-employ {
+  transition: 1s;
   max-width: 550px;
   background-color: #091532;
   padding: 50px;
   border-radius: 10px;
 }
 section.experiences .expage .content-employ .content {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  transform: scale(0);
+  filter: opacity(0);
+  height: 0;
 }
 section.experiences .expage .content-employ .content h3 {
   color: #f0f0f0;
   font-size: 1.5em;
   font-weight: normal;
-  max-width: 75%;
+  max-width: 85%;
 }
 section.experiences .expage .content-employ .content span {
   margin-bottom: 10px;
@@ -755,6 +757,14 @@ section.experiences .expage .content-employ .content ul li {
 section.experiences .expage .content-employ .content ul li::marker {
   color: #06acd4;
   font-weight: bold;
+}
+section.experiences .expage .content-employ .act {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transform: scale(1);
+  height: auto;
+  filter: opacity(1);
 }
 
 @keyframes upndown {
