@@ -59,6 +59,41 @@
         .content-employ {
           // flex: 1;
           max-width: 550px;
+          background-color: #091532;
+          padding: 50px;
+          border-radius: 10px;
+          .content {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            h3 {
+              color: #f0f0f0;
+              font-size: 1.5em;
+              font-weight: normal;
+              max-width: 75%;
+            }
+            span {
+              p {
+                color: #a09e9e;
+                font-size: 1em;
+              }
+              margin-bottom: 10px;
+            }
+            ul {
+              list-style: ">";
+              li {
+                line-height: 1.5;
+                color: #e4e4e4;
+                font-size: 1em;
+                margin: 10px 0px;
+                padding-left: 15px;
+                &::marker {
+                  color: #06acd4;
+                  font-weight: bold;
+                }
+              }
+            }
+          }
         }
       }
     }

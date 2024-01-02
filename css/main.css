@@ -720,6 +720,41 @@ section.experiences .expage .employment ul li a {
 }
 section.experiences .expage .content-employ {
   max-width: 550px;
+  background-color: #091532;
+  padding: 50px;
+  border-radius: 10px;
+}
+section.experiences .expage .content-employ .content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+section.experiences .expage .content-employ .content h3 {
+  color: #f0f0f0;
+  font-size: 1.5em;
+  font-weight: normal;
+  max-width: 75%;
+}
+section.experiences .expage .content-employ .content span {
+  margin-bottom: 10px;
+}
+section.experiences .expage .content-employ .content span p {
+  color: #a09e9e;
+  font-size: 1em;
+}
+section.experiences .expage .content-employ .content ul {
+  list-style: ">";
+}
+section.experiences .expage .content-employ .content ul li {
+  line-height: 1.5;
+  color: #e4e4e4;
+  font-size: 1em;
+  margin: 10px 0px;
+  padding-left: 15px;
+}
+section.experiences .expage .content-employ .content ul li::marker {
+  color: #06acd4;
+  font-weight: bold;
 }
 
 @keyframes upndown {
