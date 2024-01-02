@@ -728,8 +728,9 @@ section.experiences .expage .content-employ {
 }
 section.experiences .expage .content-employ .content {
   transform: scale(0);
-  filter: opacity(0);
+  opacity: 0;
   height: 0;
+  transition: opacity 0.75s ease, height 0.75s ease;
 }
 section.experiences .expage .content-employ .content h3 {
   color: #f0f0f0;
@@ -764,7 +765,7 @@ section.experiences .expage .content-employ .act {
   gap: 10px;
   transform: scale(1);
   height: auto;
-  filter: opacity(1);
+  opacity: 1;
 }
 
 @keyframes upndown {
