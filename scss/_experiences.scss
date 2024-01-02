@@ -43,16 +43,14 @@
               padding: 20px;
               border-left: 3px solid #233154;
               transition: 0.3s;
+              color: #f0f0f0;
               &.active {
                 border-left: 3px solid #06acd4;
                 background-color: #074c5c;
-                a {
-                  color: #29cbef;
-                }
+                color: #29cbef;
               }
-              a {
-                text-decoration: none;
-                color: #f0f0f0;
+              &:hover {
+                cursor: pointer;
               }
             }
           }

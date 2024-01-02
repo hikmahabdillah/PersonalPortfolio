@@ -707,17 +707,15 @@ section.experiences .expage .employment ul li {
   padding: 20px;
   border-left: 3px solid #233154;
   transition: 0.3s;
+  color: #f0f0f0;
 }
 section.experiences .expage .employment ul li.active {
   border-left: 3px solid #06acd4;
   background-color: #074c5c;
-}
-section.experiences .expage .employment ul li.active a {
   color: #29cbef;
 }
-section.experiences .expage .employment ul li a {
-  text-decoration: none;
-  color: #f0f0f0;
+section.experiences .expage .employment ul li:hover {
+  cursor: pointer;
 }
 section.experiences .expage .content-employ {
   transition: 1s;
