@@ -31,6 +31,101 @@
         padding: 15px 0px;
         max-width: 550px;
       }
+      a {
+        color: #e4e4e4;
+        text-decoration: none;
+        text-align: center;
+        align-self: center;
+        padding: 20px;
+        background-color: #2960ef;
+        border-radius: 10px;
+        font-weight: 600;
+        transition: 0.3s;
+
+        &:hover {
+          background-color: #132e6c;
+        }
+      }
+      .contain {
+        display: flex;
+        width: 70vw;
+        align-self: center;
+        background-color: #0c1d46;
+        padding: 20px;
+        border-radius: 15px;
+        margin: 20px 0;
+      }
+      .panel {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 60vh;
+        border-radius: 50px;
+        color: #fff;
+        cursor: pointer;
+        flex: 0.5;
+        margin: 10px;
+        position: relative;
+        transition: flex 0.7s ease-in;
+        -webkit-transition: all 0.45s ease-in;
+
+        h3 {
+          font-size: 24px;
+          font-weight: 600;
+          position: absolute;
+          bottom: 40px;
+          left: 30px;
+          margin: 0;
+          opacity: 0;
+        }
+        p {
+          font-size: 18px;
+          color: #919191;
+          font-weight: normal;
+          position: absolute;
+          bottom: 20px;
+          left: 30px;
+          margin: 0;
+          opacity: 0;
+        }
+        span {
+          font-size: 17px;
+          font-weight: normal;
+          position: absolute;
+          bottom: 30px;
+          right: 30px;
+          margin: 0;
+          opacity: 0;
+        }
+        &.active {
+          flex: 5;
+          .gradient-overlay {
+            border-radius: 50px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+              to bottom,
+              rgba(0, 0, 0, 0),
+              rgb(0, 0, 0)
+            ); /* Sesuaikan nilai RGBA sesuai kebutuhan gelapnya */
+          }
+          h3 {
+            opacity: 1;
+            transition: opacity 0.3s ease-in 0.4s;
+          }
+          p {
+            opacity: 1;
+            transition: opacity 0.3s ease-in 0.4s;
+          }
+          span {
+            opacity: 1;
+            transition: opacity 0.3s ease-in 0.4s;
+          }
+        }
+      }
     }
   }
 }

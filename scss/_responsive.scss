@@ -11,6 +11,14 @@
   }
 
   @media screen and (max-width: 520px) {
+    .contain {
+      width: 100vw;
+    }
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5) {
+      display: none;
+    }
+
     .left-content {
       .greeting {
         h2 {
