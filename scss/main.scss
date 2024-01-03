@@ -6,6 +6,7 @@
 @use "about" as ab;
 @use "skills" as ms;
 @use "experiences" as ex;
+@use "projects" as pr;
 
 :root {
   --dark-navy: #020c1b;
@@ -101,6 +102,9 @@ $text-color: #fff;
 
 // EXPERIENCES
 @include ex.experiences();
+
+// PROJECTS
+@include pr.projects();
 
 // ANIMATION CSS
 @include a.allAnimation();

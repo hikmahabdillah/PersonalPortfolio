@@ -489,6 +489,7 @@ section.skills .opsi span p {
 }
 section.skills .listAll {
   position: relative;
+  padding: 10px;
 }
 section.skills .listAll h3 {
   color: #0a1838;
@@ -515,8 +516,12 @@ section.skills .listTools .minicard {
   border-left: 5px solid #2978ef;
   transition: 0.5s;
 }
+section.skills .listTools .minicard:hover {
+  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.5);
+}
 section.skills .listTools .minicard:hover img {
-  transform: scale(1.1);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  transform: translateY(-5px) scale(1.05);
 }
 section.skills .listTools .minicard:nth-child(2) {
   border-left: 5px solid #00a607;
@@ -562,6 +567,7 @@ section.skills .listTech {
   transition: 0.3s;
   overflow: hidden;
   max-width: 100%;
+  padding-bottom: 10px;
 }
 section.skills .listTech .minicard {
   display: flex;
@@ -574,8 +580,12 @@ section.skills .listTech .minicard {
   border-left: 5px solid #ef5929;
   transition: 0.5s;
 }
+section.skills .listTech .minicard:hover {
+  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.5);
+}
 section.skills .listTech .minicard:hover img {
-  transform: scale(1.1);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  transform: translateY(-5px) scale(1.05);
 }
 section.skills .listTech .minicard:nth-child(2) {
   border-left: 5px solid #2978ef;
@@ -764,6 +774,41 @@ section.experiences .expage .content-employ .act {
   transform: scale(1);
   height: auto;
   opacity: 1;
+}
+
+section {
+  background-color: #0a1838;
+}
+section.projects {
+  padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+section.projects .head-project {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin: 0 30px;
+}
+section.projects .head-project h2 {
+  color: #f0f0f0;
+  font-size: 3em;
+  padding-bottom: 10px;
+}
+section.projects .head-project hr {
+  height: 1px;
+  width: 100%;
+  background-color: #132e6c;
+  color: #132e6c;
+  border: 1px solid #132e6c;
+}
+section.projects .description {
+  color: #e4e4e4;
+  text-align: center;
+  align-self: center;
+  padding: 15px 0px;
+  max-width: 550px;
 }
 
 @keyframes upndown {

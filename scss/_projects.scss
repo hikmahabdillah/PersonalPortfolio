@@ -1,0 +1,36 @@
+@mixin projects {
+  section {
+    background-color: #0a1838;
+    &.projects {
+      padding: 50px;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      .head-project {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        margin: 0 30px;
+        h2 {
+          color: #f0f0f0;
+          font-size: 3em;
+          padding-bottom: 10px;
+        }
+        hr {
+          height: 1px;
+          width: 100%;
+          background-color: #132e6c;
+          color: #132e6c;
+          border: 1px solid #132e6c;
+        }
+      }
+      .description {
+        color: #e4e4e4;
+        text-align: center;
+        align-self: center;
+        padding: 15px 0px;
+        max-width: 550px;
+      }
+    }
+  }
+}
