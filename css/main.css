@@ -923,8 +923,13 @@ section .popup .content h2 {
 }
 section .popup .content img.project-img {
   max-width: 350px;
+  max-height: 250px;
   width: 100%;
   border-radius: 15px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 section .popup .content .detail {
   display: flex;

@@ -237,35 +237,35 @@
             <div class="gradient-overlay"></div>
             <h3>Project 2</h3>
             <p>School Project</p>
-            <span>Detail ></span>
+            <span class="popup-btn" data-popup-id="popup-2">Detail ></span>
             <span><img src="img/clock-rotate-left-solid.svg" alt="" width="20px">May 18, 2023</span>
           </div>
           <div class="panel" style="background-image: url(img/project3.png);">
             <div class="gradient-overlay"></div>
               <h3>Project 3</h3>
               <p>School Project</p>
-              <span>Detail ></span>
+              <span class="popup-btn" data-popup-id="popup-3">Detail ></span>
               <span><img src="img/clock-rotate-left-solid.svg" alt="" width="20px">May 18, 2023</span>
           </div>
           <div class="panel active" style="background-image: url(img/project1.png);">
             <div class="gradient-overlay"></div>
               <h3>Project 1</h3>
               <p>School Project</p>
-              <span onclick="togglePopup()">Detail ></span>
+              <span class="popup-btn" data-popup-id="popup-1">Detail ></span>
               <span><img src="img/clock-rotate-left-solid.svg" alt="" width="20px">May 18, 2023</span>
           </div>
           <div class="panel" style="background-image: url(img/project4.png);">
             <div class="gradient-overlay"></div>
               <h3>Project 4</h3>
               <p>School Project</p>
-              <span>Detail ></span>
+              <span class="popup-btn" data-popup-id="popup-4">Detail ></span>
               <span><img src="img/clock-rotate-left-solid.svg" alt="" width="20px">May 18, 2023</span>
           </div>
           <div class="panel" style="background-image: url(img/project5.png);">
             <div class="gradient-overlay"></div>
               <h3>Project 5</h3>
               <p>School Project</p>
-              <span>Detail ></span>
+              <span class="popup-btn" data-popup-id="popup-5">Detail ></span>
               <span><img src="img/clock-rotate-left-solid.svg" alt="" width="20px">May 18, 2023</span>
           </div>
         </div>
@@ -274,12 +274,104 @@
         <div class="popup" id="popup-1">
           <div class="overlay"></div>
           <div class="content">
-            <div class="close-btn" onclick="togglePopup()">&times;</div>
+            <div class="close-btn" onclick="togglePopup('popup-1')">&times;</div>
             <div class="title">
               <h1>Project 1</h1>
               <h2>School Project</h2>
             </div>
             <img src="img/project1.png" alt="" class="project-img">
+            <div class="detail">
+              <div class="tech">
+                <img src="img/Html 5.png" alt="html" width="40px" height="40px">
+                <img src="img/CSS3.png" alt="html" width="40px" height="40px"><img src="img/JavaScript.png" alt="html" width="40px" height="40px"><img src="img/Sass.png" alt="html" width="40px" height="40px">
+              </div>
+              <span>May 18, 2023</span>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae ratione dolores deleniti officia. Doloribus ut nesciunt explicabo earum, nihil autem!</p>
+            <div class="menu">
+              <span class="github"><img src="img/github.svg" alt="" width="25px">Repository</span>
+              <span class="preview"><img src="img/arrow-up-right-from-square-solid.svg" alt="" width="25px">Preview</span>
+            </div>
+          </div>
+        </div>
+        <div class="popup" id="popup-2">
+          <div class="overlay"></div>
+          <div class="content">
+            <div class="close-btn" onclick="togglePopup('popup-2')">&times;</div>
+            <div class="title">
+              <h1>Project 2</h1>
+              <h2>School Project</h2>
+            </div>
+            <img src="img/project2.png" alt="" class="project-img">
+            <div class="detail">
+              <div class="tech">
+                <img src="img/Html 5.png" alt="html" width="40px" height="40px">
+                <img src="img/CSS3.png" alt="html" width="40px" height="40px"><img src="img/JavaScript.png" alt="html" width="40px" height="40px"><img src="img/Sass.png" alt="html" width="40px" height="40px">
+              </div>
+              <span>May 18, 2023</span>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae ratione dolores deleniti officia. Doloribus ut nesciunt explicabo earum, nihil autem!</p>
+            <div class="menu">
+              <span class="github"><img src="img/github.svg" alt="" width="25px">Repository</span>
+              <span class="preview"><img src="img/arrow-up-right-from-square-solid.svg" alt="" width="25px">Preview</span>
+            </div>
+          </div>
+        </div>
+        <div class="popup" id="popup-3">
+          <div class="overlay"></div>
+          <div class="content">
+            <div class="close-btn" onclick="togglePopup('popup-3')">&times;</div>
+            <div class="title">
+              <h1>Project 3</h1>
+              <h2>School Project</h2>
+            </div>
+            <img src="img/project3.png" alt="" class="project-img">
+            <div class="detail">
+              <div class="tech">
+                <img src="img/Html 5.png" alt="html" width="40px" height="40px">
+                <img src="img/CSS3.png" alt="html" width="40px" height="40px"><img src="img/JavaScript.png" alt="html" width="40px" height="40px"><img src="img/Sass.png" alt="html" width="40px" height="40px">
+              </div>
+              <span>May 18, 2023</span>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae ratione dolores deleniti officia. Doloribus ut nesciunt explicabo earum, nihil autem!</p>
+            <div class="menu">
+              <span class="github"><img src="img/github.svg" alt="" width="25px">Repository</span>
+              <span class="preview"><img src="img/arrow-up-right-from-square-solid.svg" alt="" width="25px">Preview</span>
+            </div>
+          </div>
+        </div>
+        <div class="popup" id="popup-4">
+          <div class="overlay"></div>
+          <div class="content">
+            <div class="close-btn" onclick="togglePopup('popup-4')">&times;</div>
+            <div class="title">
+              <h1>Project 4</h1>
+              <h2>School Project</h2>
+            </div>
+            <img src="img/project4.png" alt="" class="project-img">
+            <div class="detail">
+              <div class="tech">
+                <img src="img/Html 5.png" alt="html" width="40px" height="40px">
+                <img src="img/CSS3.png" alt="html" width="40px" height="40px"><img src="img/JavaScript.png" alt="html" width="40px" height="40px"><img src="img/Sass.png" alt="html" width="40px" height="40px">
+              </div>
+              <span>May 18, 2023</span>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae ratione dolores deleniti officia. Doloribus ut nesciunt explicabo earum, nihil autem!</p>
+            <div class="menu">
+              <span class="github"><img src="img/github.svg" alt="" width="25px">Repository</span>
+              <span class="preview"><img src="img/arrow-up-right-from-square-solid.svg" alt="" width="25px">Preview</span>
+            </div>
+          </div>
+        </div>
+        <div class="popup" id="popup-5">
+          <div class="overlay"></div>
+          <div class="content">
+            <div class="close-btn" onclick="togglePopup('popup-5')">&times;</div>
+            <div class="title">
+              <h1>Project 5</h1>
+              <h2>School Project</h2>
+            </div>
+            <img src="img/project5.png" alt="" class="project-img">
             <div class="detail">
               <div class="tech">
                 <img src="img/Html 5.png" alt="html" width="40px" height="40px">
