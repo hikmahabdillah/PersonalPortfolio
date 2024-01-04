@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@800&family=Poppins:wght@200&family=Raleway:wght@800&family=Mulish:wght@500&family=Raleway:wght@500&family=Teko&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@800&family=Poppins:wght@200&family=Poppins:wght@500&family=Raleway:wght@800&family=Mulish:wght@500&family=Raleway:wght@500&family=Teko&display=swap");
 :root {
   --dark-navy: #020c1b;
   --navy: #15132a;
@@ -254,43 +254,6 @@ nav ul li a:hover {
 
 menu-item a.active {
   color: #ff6600; /* Warna aktif */
-}
-
-.switch-container {
-  display: flex;
-  gap: 5px;
-}
-
-.switch-input {
-  display: none;
-}
-
-.switch-label {
-  display: block;
-  width: 50px;
-  height: 25px;
-  background-color: #ddd;
-  border-radius: 15px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.switch-input:checked + .switch-label {
-  background-color: #0a1838; /* warna ketika tombol switch aktif */
-}
-
-.switch-label::before {
-  content: "";
-  display: block;
-  width: 25px;
-  height: 25px;
-  background-color: white;
-  border-radius: 50%;
-  transition: transform 0.3s;
-}
-
-.switch-input:checked + .switch-label::before {
-  transform: translateX(25px); /* menggerakkan bulatan ke kanan saat tombol switch aktif */
 }
 
 /* Hamburger menu */
@@ -838,7 +801,7 @@ section.projects .panel {
   background-position: center;
   background-repeat: no-repeat;
   height: 60vh;
-  border-radius: 50px;
+  border-radius: 20px;
   color: #fff;
   cursor: pointer;
   flex: 0.5;
@@ -846,20 +809,22 @@ section.projects .panel {
   position: relative;
   transition: flex 0.7s ease-in;
   -webkit-transition: all 0.45s ease-in;
+  font-family: "Poppins", sans-serif;
 }
 section.projects .panel h3 {
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 500;
   position: absolute;
   bottom: 40px;
   left: 30px;
   margin: 0;
   opacity: 0;
+  letter-spacing: 1px;
 }
 section.projects .panel p {
+  font-weight: 500;
   font-size: 18px;
   color: #919191;
-  font-weight: normal;
   position: absolute;
   bottom: 20px;
   left: 30px;
@@ -875,11 +840,27 @@ section.projects .panel span {
   margin: 0;
   opacity: 0;
 }
+section.projects .panel span:last-of-type {
+  font-size: 17px;
+  font-weight: normal;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  margin: 0;
+  opacity: 0;
+  height: 20px;
+}
+section.projects .panel span:last-of-type img {
+  right: 115px;
+  top: 2.5px;
+  position: absolute;
+  text-align: center;
+}
 section.projects .panel.active {
   flex: 5;
 }
 section.projects .panel.active .gradient-overlay {
-  border-radius: 50px;
+  border-radius: 20px;
   position: absolute;
   top: 0;
   left: 0;
@@ -898,6 +879,129 @@ section.projects .panel.active p {
 section.projects .panel.active span {
   opacity: 1;
   transition: opacity 0.3s ease-in 0.4s;
+}
+section .popup .overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+  display: none;
+  transition: all 0.3s;
+}
+section .popup.active .overlay {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+  display: block;
+}
+section .popup .content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background: #fff;
+  padding: 20px;
+  z-index: 2;
+  border-radius: 30px;
+  max-width: 350px;
+  width: 90%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+section .popup .content h2 {
+  font-size: 18px;
+  font-weight: 200;
+  color: #919191;
+}
+section .popup .content img.project-img {
+  max-width: 350px;
+  width: 100%;
+  border-radius: 15px;
+}
+section .popup .content .detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5px;
+}
+section .popup .content .detail .tech img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+section .popup .content .detail span {
+  font-weight: 500;
+  color: #585858;
+}
+section .popup .content p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: #131212;
+  padding: 0 0 0 10px;
+  border-left: 2px solid #131212;
+}
+section .popup .content .menu {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-around;
+}
+section .popup .content .menu .github {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: 2px solid rgba(19, 18, 18, 0);
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+section .popup .content .menu .github:hover {
+  border: 2px solid #131212;
+}
+section .popup .content .menu .preview {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: 2px solid rgba(41, 97, 239, 0);
+  color: #f0f0f0;
+  background-color: #06acd4;
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+section .popup .content .menu .preview:hover {
+  background-color: #0a1838;
+  border: 2px solid #2960ef;
+}
+section .popup.active .content {
+  transition: all 0.3s ease-in-out;
+  transform: translate(-50%, -50%) scale(1);
+}
+section .popup .close-btn {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  width: 40px;
+  height: 30px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #131212;
+  font-size: 60px;
+  font-weight: 500;
+  cursor: pointer;
 }
 
 @keyframes upndown {

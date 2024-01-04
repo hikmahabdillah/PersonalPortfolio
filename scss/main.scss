@@ -7,6 +7,7 @@
 @use "skills" as ms;
 @use "experiences" as ex;
 @use "projects" as pr;
+// @use "projectcard" as pc;
 
 :root {
   --dark-navy: #020c1b;
@@ -20,7 +21,7 @@ html {
 }
 
 // font
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@800&family=Poppins:wght@200&family=Raleway:wght@800&family=Mulish:wght@500&family=Raleway:wght@500&family=Teko&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@800&family=Poppins:wght@200&family=Poppins:wght@500&family=Raleway:wght@800&family=Mulish:wght@500&family=Raleway:wght@500&family=Teko&display=swap");
 
 // reset and default
 * {
@@ -105,6 +106,9 @@ $text-color: #fff;
 
 // PROJECTS
 @include pr.projects();
+
+// PROJECT CARD
+// @include pc.projectcard();
 
 // ANIMATION CSS
 @include a.allAnimation();

@@ -123,3 +123,8 @@ const removeActiveClasses = () => {
     panel.classList.remove("active");
   });
 };
+
+// POPUP CARD
+function togglePopup() {
+  document.getElementById("popup-1").classList.toggle("active");
+}

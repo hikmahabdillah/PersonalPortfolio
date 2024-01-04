@@ -60,7 +60,7 @@
         background-position: center;
         background-repeat: no-repeat;
         height: 60vh;
-        border-radius: 50px;
+        border-radius: 20px;
         color: #fff;
         cursor: pointer;
         flex: 0.5;
@@ -68,20 +68,22 @@
         position: relative;
         transition: flex 0.7s ease-in;
         -webkit-transition: all 0.45s ease-in;
+        font-family: "Poppins", sans-serif;
 
         h3 {
           font-size: 24px;
-          font-weight: 600;
+          font-weight: 500;
           position: absolute;
           bottom: 40px;
           left: 30px;
           margin: 0;
           opacity: 0;
+          letter-spacing: 1px;
         }
         p {
+          font-weight: 500;
           font-size: 18px;
           color: #919191;
-          font-weight: normal;
           position: absolute;
           bottom: 20px;
           left: 30px;
@@ -97,10 +99,26 @@
           margin: 0;
           opacity: 0;
         }
+        span:last-of-type {
+          font-size: 17px;
+          font-weight: normal;
+          position: absolute;
+          top: 30px;
+          right: 30px;
+          margin: 0;
+          opacity: 0;
+          height: 20px;
+          img {
+            right: 115px;
+            top: 2.5px;
+            position: absolute;
+            text-align: center;
+          }
+        }
         &.active {
           flex: 5;
           .gradient-overlay {
-            border-radius: 50px;
+            border-radius: 20px;
             position: absolute;
             top: 0;
             left: 0;
@@ -126,6 +144,131 @@
           }
         }
       }
+    }
+    .popup .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: 1;
+      display: none;
+      transition: all 0.3s;
+    }
+
+    .popup.active .overlay {
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      width: 100vw;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: 1;
+      display: block;
+    }
+
+    .popup .content {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      background: #fff;
+      padding: 20px;
+      z-index: 2;
+      border-radius: 30px;
+      max-width: 350px;
+      width: 90%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      h2 {
+        font-size: 18px;
+        font-weight: 200;
+        color: #919191;
+      }
+      img.project-img {
+        max-width: 350px;
+        width: 100%;
+        border-radius: 15px;
+      }
+      .detail {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 5px;
+        .tech img {
+          object-fit: cover;
+          object-position: center;
+        }
+        span {
+          font-weight: 500;
+          color: #585858;
+        }
+      }
+      p {
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        color: #131212;
+        padding: 0 0 0 10px;
+        border-left: 2px solid #131212;
+      }
+      .menu {
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        display: flex;
+        justify-content: space-around;
+        .github {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          padding: 10px 15px;
+          border-radius: 10px;
+          border: 2px solid #13121200;
+          transition: all 0.4s ease-in-out;
+          cursor: pointer;
+          &:hover {
+            border: 2px solid #131212;
+          }
+        }
+        .preview {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          padding: 10px 15px;
+          border-radius: 10px;
+          border: 2px solid #2961ef00;
+          color: #f0f0f0;
+          background-color: #06acd4;
+          transition: all 0.4s ease-in-out;
+          cursor: pointer;
+          &:hover {
+            background-color: #0a1838;
+            border: 2px solid #2960ef;
+          }
+        }
+      }
+    }
+
+    .popup.active .content {
+      transition: all 0.3s ease-in-out;
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    .popup .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 10px;
+      width: 40px;
+      height: 30px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #131212;
+      font-size: 60px;
+      font-weight: 500;
+      cursor: pointer;
     }
   }
 }

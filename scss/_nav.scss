@@ -64,46 +64,6 @@
     color: #ff6600; /* Warna aktif */
   }
 
-  .switch-container {
-    display: flex;
-    gap: 5px;
-  }
-
-  .switch-input {
-    display: none;
-  }
-
-  .switch-label {
-    display: block;
-    width: 50px;
-    height: 25px;
-    background-color: #ddd;
-    border-radius: 15px;
-    // position: absolute;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-
-  .switch-input:checked + .switch-label {
-    background-color: #0a1838; /* warna ketika tombol switch aktif */
-  }
-
-  .switch-label::before {
-    content: "";
-    display: block;
-    width: 25px;
-    height: 25px;
-    background-color: white;
-    border-radius: 50%;
-    transition: transform 0.3s;
-  }
-
-  .switch-input:checked + .switch-label::before {
-    transform: translateX(
-      25px
-    ); /* menggerakkan bulatan ke kanan saat tombol switch aktif */
-  }
-
   /* Hamburger menu */
   .menu-toggle {
     display: none;

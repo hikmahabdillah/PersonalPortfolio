@@ -10,6 +10,8 @@
       href="img/20230722_195256.png"
       type="image/x-icon"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha384-glCJZlPz3D96Lce2oqeB4QvGz8NYpLy+3P6LXJgbe5FZs5d6q6K1uBr7JjzZzOy" crossorigin="anonymous">
+
   </head>
   <body>
     <div class="box-intro">
@@ -29,24 +31,6 @@
             <li><a href="#experiences">Experiences</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
-            <div class="switch-container">
-              <span
-                ><img
-                  src="img/icons8-sun-30.png"
-                  alt="sun icon"
-                  width="25px"
-                  height="25px"
-              /></span>
-              <input type="checkbox" id="switch" class="switch-input" checked />
-              <label for="switch" class="switch-label"> </label>
-              <span
-                ><img
-                  src="img/icons8-moon-30.png"
-                  alt="moon icon"
-                  width="25px"
-                  height="25px"
-              /></span>
-            </div>
           </ul>
           <div class="menu-toggle">
             <input type="checkbox" name="" id="" />
@@ -254,33 +238,64 @@
             <h3>Project 2</h3>
             <p>School Project</p>
             <span>Detail ></span>
+            <span><img src="img/clock-rotate-left-solid.svg" alt="" width="20px">May 18, 2023</span>
           </div>
           <div class="panel" style="background-image: url(img/project3.png);">
             <div class="gradient-overlay"></div>
               <h3>Project 3</h3>
               <p>School Project</p>
               <span>Detail ></span>
+              <span><img src="img/clock-rotate-left-solid.svg" alt="" width="20px">May 18, 2023</span>
           </div>
           <div class="panel active" style="background-image: url(img/project1.png);">
             <div class="gradient-overlay"></div>
               <h3>Project 1</h3>
               <p>School Project</p>
-              <span>Detail ></span>
+              <span onclick="togglePopup()">Detail ></span>
+              <span><img src="img/clock-rotate-left-solid.svg" alt="" width="20px">May 18, 2023</span>
           </div>
           <div class="panel" style="background-image: url(img/project4.png);">
             <div class="gradient-overlay"></div>
               <h3>Project 4</h3>
               <p>School Project</p>
               <span>Detail ></span>
+              <span><img src="img/clock-rotate-left-solid.svg" alt="" width="20px">May 18, 2023</span>
           </div>
           <div class="panel" style="background-image: url(img/project5.png);">
             <div class="gradient-overlay"></div>
               <h3>Project 5</h3>
               <p>School Project</p>
               <span>Detail ></span>
+              <span><img src="img/clock-rotate-left-solid.svg" alt="" width="20px">May 18, 2023</span>
           </div>
         </div>
-        <a href="projects.html">View All Projects ></a>
+
+        <!-- Popup Card -->
+        <div class="popup" id="popup-1">
+          <div class="overlay"></div>
+          <div class="content">
+            <div class="close-btn" onclick="togglePopup()">&times;</div>
+            <div class="title">
+              <h1>Project 1</h1>
+              <h2>School Project</h2>
+            </div>
+            <img src="img/project1.png" alt="" class="project-img">
+            <div class="detail">
+              <div class="tech">
+                <img src="img/Html 5.png" alt="html" width="40px" height="40px">
+                <img src="img/CSS3.png" alt="html" width="40px" height="40px"><img src="img/JavaScript.png" alt="html" width="40px" height="40px"><img src="img/Sass.png" alt="html" width="40px" height="40px">
+              </div>
+              <span>May 18, 2023</span>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae ratione dolores deleniti officia. Doloribus ut nesciunt explicabo earum, nihil autem!</p>
+            <div class="menu">
+              <span class="github"><img src="img/github.svg" alt="" width="25px">Repository</span>
+              <span class="preview"><img src="img/arrow-up-right-from-square-solid.svg" alt="" width="25px">Preview</span>
+            </div>
+          </div>
+        </div>
+
+        <a href="projects.html" >View All Projects ></a>
       </section>
     </div>
     <script src="js/script.js"></script>
