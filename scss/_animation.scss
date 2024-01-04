@@ -8,6 +8,17 @@
       transform: translateY(-30px);
     }
   }
+
+  @keyframes rotatebg {
+    0%,
+    100% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(360deg);
+    }
+  }
+
   @keyframes changeImage {
     0%,
     100% {
@@ -15,6 +26,8 @@
     }
     50% {
       background-image: url("../img/h44-b.png");
+      image-rendering: auto;
+      will-change: background;
       opacity: 1;
     }
   }
