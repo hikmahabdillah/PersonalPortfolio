@@ -127,7 +127,6 @@ const removeActiveClasses = () => {
 // POPUP CARD
 function togglePopup(popupId) {
   const popup = document.getElementById(popupId);
-
   if (popup) {
     popup.classList.toggle("active");
   }

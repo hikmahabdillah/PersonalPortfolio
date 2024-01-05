@@ -53,7 +53,7 @@ body::-webkit-scrollbar-thumb {
   justify-content: center;
   align-items: center;
   animation: fadeOut;
-  animation-fill-mode: forwards;
+  animation-fill-mode: both;
   animation-iteration-count: 1;
   animation-duration: 2s;
   animation-delay: 3s;
@@ -68,8 +68,8 @@ body::-webkit-scrollbar-thumb {
   overflow: hidden;
   transform: translateY(-50px);
   opacity: 0;
-  animation: changeImage 5s;
-  -moz-animation: changeImage 5s;
+  animation: changeImage 4s;
+  -moz-animation: changeImage 4s;
   will-change: transform;
   z-index: -1;
 }
@@ -79,7 +79,6 @@ body::-webkit-scrollbar-thumb {
   opacity: 0;
   transform: translateY(-100px);
   will-change: transform;
-  animation-delay: 1s;
   z-index: -1;
 }
 
@@ -899,7 +898,7 @@ section .popup.active .overlay {
   left: 0px;
   width: 100vw;
   background: rgba(0, 0, 0, 0.7);
-  z-index: 1;
+  z-index: 2;
   display: block;
 }
 section .popup .content {
@@ -909,7 +908,7 @@ section .popup .content {
   transform: translate(-50%, -50%) scale(0);
   background: #fff;
   padding: 20px;
-  z-index: 2;
+  z-index: 3;
   border-radius: 30px;
   max-width: 350px;
   width: 90%;
