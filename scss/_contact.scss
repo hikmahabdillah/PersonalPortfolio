@@ -4,6 +4,7 @@
     &.contact {
       padding: 50px 30px;
       display: flex;
+      flex-wrap: wrap-reverse;
       justify-content: space-evenly;
       align-items: center;
 
@@ -90,7 +91,7 @@
           height: 100%;
           object-fit: cover;
           object-position: center;
-          animation: rotatebg 5s ease-in-out infinite;
+          // animation: rotatebg 5s ease-in-out infinite;
         }
         .vector {
           z-index: 1;
@@ -100,6 +101,17 @@
           filter: drop-shadow(0px 5px 5px, rgb(255, 255, 255));
           animation: upndown 5s ease-in-out infinite;
         }
+      }
+    }
+  }
+  footer {
+    background-color: #030a1b;
+    text-align: center;
+    padding: 35px;
+    p {
+      color: #737373;
+      span {
+        color: #06acd4;
       }
     }
   }

@@ -1017,6 +1017,7 @@ section {
 section.contact {
   padding: 50px 30px;
   display: flex;
+  flex-wrap: wrap-reverse;
   justify-content: space-evenly;
   align-items: center;
 }
@@ -1104,7 +1105,6 @@ section.contact .contact-right .bg-contact {
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
-  animation: rotatebg 5s ease-in-out infinite;
 }
 section.contact .contact-right .vector {
   z-index: 1;
@@ -1114,6 +1114,18 @@ section.contact .contact-right .vector {
      object-fit: cover;
   filter: drop-shadow(0px 5px 5px, rgb(255, 255, 255));
   animation: upndown 5s ease-in-out infinite;
+}
+
+footer {
+  background-color: #030a1b;
+  text-align: center;
+  padding: 35px;
+}
+footer p {
+  color: #737373;
+}
+footer p span {
+  color: #06acd4;
 }
 
 @keyframes upndown {
@@ -1129,7 +1141,7 @@ section.contact .contact-right .vector {
     transform: rotate(0deg);
   }
   50% {
-    transform: rotate(360deg);
+    transform: rotate(180deg);
   }
 }
 @keyframes changeImage {
