@@ -83,6 +83,36 @@ $text-color: #fff;
   }
 }
 
+// scrollOnTop
+#progress {
+  position: fixed;
+  bottom: 50px;
+  right: 20px;
+  height: 50px;
+  width: 50px;
+  display: none;
+  place-items: center;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 0 10px;
+  img {
+    object-fit: cover;
+    object-position: center;
+    transform: rotate(315deg) translateY(5px) translateX(-5px);
+    margin-bottom: 10px;
+  }
+}
+#progress-value {
+  display: block;
+  height: calc(100% - 10px);
+  width: calc(100% - 10px);
+  background: linear-gradient(to right bottom, #0159de, #29cbef);
+  transition: 0.5s;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
 @include h.mainHeader();
 
 .left-content {

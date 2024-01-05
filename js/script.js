@@ -39,27 +39,34 @@ tool.addEventListener("click", function () {
 });
 
 // ANIMATION EFFECT ON SCROLL AT NAV
-window.addEventListener("scroll", function () {
-  let header = document.querySelector("nav");
-  header.classList.toggle("sticky", window.scrollY > 0);
-});
-
 const navbar = document.getElementById("navbar");
 let prevScrollPos = window.pageYOffset;
 
-window.onscroll = function () {
+const handleLoad = () => {
+  let header = document.querySelector("nav");
+  header.classList.toggle("sticky", window.scrollY > 0);
+  calcScrollValue();
+};
+
+const handleScroll = () => {
+  // Your existing scroll code here
   const currentScrollPos = window.pageYOffset;
 
   if (prevScrollPos > currentScrollPos) {
-    // Munculkan navbar saat scroll ke atas
     navbar.style.transform = "translateY(0)";
   } else {
-    // Hilangkan navbar saat scroll ke bawah
     navbar.style.transform = "translateY(-100%)";
   }
 
   prevScrollPos = currentScrollPos;
+
+  // Call the common scroll value calculation
+  calcScrollValue();
 };
+
+// Assign the combined function to both window.onscroll and window.onload
+window.addEventListener("scroll", handleLoad, handleScroll);
+window.addEventListener("load", handleLoad, handleScroll);
 
 // EXPERIENCES LI
 var listItems = document.querySelectorAll(".employment li");
@@ -147,3 +154,31 @@ document.querySelectorAll(".close-btn").forEach((closeButton) => {
     togglePopup(popupId);
   });
 });
+
+// Scroll ON Top
+
+let calcScrollValue = () => {
+  let scrollProgress = document.getElementById("progress");
+  let progressValue = document.getElementById("progress-value");
+  let pos = document.documentElement.scrollTop;
+
+  let calcHeight =
+    document.documentElement.scrollHeight -
+    document.documentElement.clientHeight;
+
+  let scrollValue = Math.round((pos * 100) / calcHeight);
+  if (pos > 100) {
+    scrollProgress.style.display = "grid";
+  } else {
+    scrollProgress.style.display = "none";
+  }
+  scrollProgress.addEventListener("click", () => {
+    document.documentElement.scrollTop = 0;
+  });
+  scrollProgress.style.background = `conic-gradient(#00327c ${scrollValue}%,#29cbef ${scrollValue}%)`;
+};
+// window.onscroll = calcScrollValue;
+// window.onload = calcScrollValue;
+
+//window.addEventListener("scroll", handleScroll1, handleScroll2);
+//window.addEventListener("load", handleScroll1, handleScroll2);

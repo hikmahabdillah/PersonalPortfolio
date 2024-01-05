@@ -94,6 +94,38 @@ body::-webkit-scrollbar-thumb {
   background-blend-mode: color-dodge !important;
 }
 
+#progress {
+  position: fixed;
+  bottom: 50px;
+  right: 20px;
+  height: 50px;
+  width: 50px;
+  display: none;
+  place-items: center;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 0 10px;
+}
+#progress img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  transform: rotate(315deg) translateY(5px) translateX(-5px);
+  margin-bottom: 10px;
+}
+
+#progress-value {
+  display: block;
+  height: calc(100% - 10px);
+  width: calc(100% - 10px);
+  background: linear-gradient(to right bottom, #0159de, #29cbef);
+  transition: 0.5s;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
 .main-header {
   display: flex;
   flex-wrap: wrap;
@@ -204,6 +236,7 @@ nav {
   left: 0;
   transition: 0.6s;
   z-index: 99;
+  max-height: 100px;
 }
 
 nav.sticky {
@@ -211,6 +244,10 @@ nav.sticky {
           backdrop-filter: blur(5px);
   background-color: rgba(13, 32, 77, 0.7960784314);
   border-bottom-color: rgba(255, 255, 255, 0.432);
+  max-height: 80px;
+}
+nav.sticky .brand img {
+  max-width: 80px;
 }
 
 .brand img {
@@ -218,6 +255,7 @@ nav.sticky {
   max-width: 100px;
   aspect-ratio: 1/1;
   position: relative;
+  transition: 0.5s;
   /* align-self: center; */
 }
 
@@ -1053,6 +1091,7 @@ section.contact .contact-left .get-contact {
 }
 section.contact .contact-left .get-contact a {
   text-decoration: none;
+  width: 80%;
 }
 section.contact .contact-left .get-contact .item-contact {
   display: flex;
