@@ -1,4 +1,4 @@
-@use "intro" as i;
+// @use "intro" as i;
 @use "home" as h;
 @use "responsive" as r;
 @use "animation" as a;
@@ -63,17 +63,17 @@ $secondary-color: #201f1f;
 $text-color: #fff;
 
 // INTRO
-.box-intro {
-  @include i.box-intro();
-  .logo-intro {
-    @include i.logo();
-    z-index: -1;
-  }
-  h2 {
-    @include i.text();
-    z-index: -1;
-  }
-}
+// .box-intro {
+//   @include i.box-intro();
+//   .logo-intro {
+//     @include i.logo();
+//     z-index: -1;
+//   }
+//   h2 {
+//     @include i.text();
+//     z-index: -1;
+//   }
+// }
 
 // HEADER
 .container {
