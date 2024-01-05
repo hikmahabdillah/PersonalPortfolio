@@ -36,17 +36,31 @@
           flex-direction: column;
           gap: 10px;
           padding: 15px;
+          a {
+            text-decoration: none;
+          }
           .item-contact {
             display: flex;
+            flex-direction: row;
             gap: 15px;
             align-items: center;
             font-family: "Poppins", sans-serif;
+            transition: 0.5s;
+            width: 100%;
+            cursor: pointer;
+            &:hover {
+              img {
+                background-color: #0583a3;
+              }
+            }
             img {
               padding: 10px;
               border-radius: 50%;
               border: 3px solid #06acd4;
               object-fit: cover;
               object-position: center;
+              background-color: #06abd400;
+              transition: 0.5s;
             }
             .text {
               h5 {
@@ -65,6 +79,12 @@
         .socials-media {
           display: flex;
           gap: 12px;
+          a {
+            transition: 0.5s;
+            &:hover {
+              transform: scale(1.1) translateY(3px);
+            }
+          }
         }
       }
       hr {

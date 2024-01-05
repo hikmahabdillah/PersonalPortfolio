@@ -1051,11 +1051,21 @@ section.contact .contact-left .get-contact {
   gap: 10px;
   padding: 15px;
 }
+section.contact .contact-left .get-contact a {
+  text-decoration: none;
+}
 section.contact .contact-left .get-contact .item-contact {
   display: flex;
+  flex-direction: row;
   gap: 15px;
   align-items: center;
   font-family: "Poppins", sans-serif;
+  transition: 0.5s;
+  width: 100%;
+  cursor: pointer;
+}
+section.contact .contact-left .get-contact .item-contact:hover img {
+  background-color: #0583a3;
 }
 section.contact .contact-left .get-contact .item-contact img {
   padding: 10px;
@@ -1065,6 +1075,8 @@ section.contact .contact-left .get-contact .item-contact img {
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+  background-color: rgba(6, 171, 212, 0);
+  transition: 0.5s;
 }
 section.contact .contact-left .get-contact .item-contact .text h5 {
   color: #fff;
@@ -1079,6 +1091,12 @@ section.contact .contact-left .get-contact .item-contact .text p {
 section.contact .contact-left .socials-media {
   display: flex;
   gap: 12px;
+}
+section.contact .contact-left .socials-media a {
+  transition: 0.5s;
+}
+section.contact .contact-left .socials-media a:hover {
+  transform: scale(1.1) translateY(3px);
 }
 section.contact hr {
   height: 1px;
