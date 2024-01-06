@@ -369,7 +369,7 @@ section.about .right-about .main-about {
   flex-direction: column;
   justify-content: start;
 }
-section.about .right-about .main-about h4 {
+section.about .right-about .main-about h1 {
   font-size: 1.5em;
   color: #0b62d5;
   letter-spacing: 10px;
@@ -1079,7 +1079,7 @@ section.contact .contact-left .get-contact .item-contact img {
   background-color: rgba(6, 171, 212, 0);
   transition: 0.5s;
 }
-section.contact .contact-left .get-contact .item-contact .text h5 {
+section.contact .contact-left .get-contact .item-contact .text h4 {
   color: #fff;
   font-size: 1.2em;
   font-weight: 500;
