@@ -136,6 +136,7 @@ function togglePopup(popupId) {
   const popup = document.getElementById(popupId);
   if (popup) {
     popup.classList.toggle("active");
+    navbar.style.transform = "translateY(-100%)";
   }
 }
 
@@ -150,6 +151,8 @@ document.querySelectorAll(".popup-btn").forEach((link) => {
 // Menambahkan event listeners untuk close button di setiap popup
 document.querySelectorAll(".close-btn").forEach((closeButton) => {
   closeButton.addEventListener("click", function () {
+    navbar.style.transform = "translateY(0)";
+    header.classList.toggle("sticky", window.scrollY > 0);
     const popupId = this.closest(".popup-").id;
     togglePopup(popupId);
   });
@@ -157,6 +160,8 @@ document.querySelectorAll(".close-btn").forEach((closeButton) => {
 
 document.querySelectorAll(".overlay").forEach((overlays) => {
   overlays.addEventListener("click", function () {
+    navbar.style.transform = "translateY(0)";
+    header.classList.toggle("sticky", window.scrollY > 0);
     const popupId = this.closest(".popup-").id;
     togglePopup(popupId);
   });
