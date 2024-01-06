@@ -95,6 +95,7 @@ $text-color: #fff;
   cursor: pointer;
   border-radius: 50%;
   box-shadow: 0 0 10px;
+  z-index: 2;
   img {
     object-fit: cover;
     object-position: center;
@@ -111,6 +112,7 @@ $text-color: #fff;
   border-radius: 50%;
   display: grid;
   place-items: center;
+  z-index: 2;
 }
 
 @include h.mainHeader();

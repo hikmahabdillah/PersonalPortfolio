@@ -64,6 +64,7 @@ body::-webkit-scrollbar-thumb {
   cursor: pointer;
   border-radius: 50%;
   box-shadow: 0 0 10px;
+  z-index: 2;
 }
 #progress img {
   -o-object-fit: cover;
@@ -83,6 +84,7 @@ body::-webkit-scrollbar-thumb {
   border-radius: 50%;
   display: grid;
   place-items: center;
+  z-index: 2;
 }
 
 .main-header {
