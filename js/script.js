@@ -41,10 +41,10 @@ tool.addEventListener("click", function () {
 // ANIMATION EFFECT ON SCROLL AT NAV
 const navbar = document.getElementById("navbar");
 let prevScrollPos = window.pageYOffset;
+// let header = document.querySelector("nav");
 
 const handleLoad = () => {
-  let header = document.querySelector("nav");
-  header.classList.toggle("sticky", window.scrollY > 0);
+  navbar.classList.toggle("sticky", window.scrollY > 0);
   calcScrollValue();
 };
 
@@ -155,8 +155,13 @@ document.querySelectorAll(".close-btn").forEach((closeButton) => {
   });
 });
 
-// Scroll ON Top
+let overlay = document.querySelectorAll(".overlay");
+overlay.addEventListener("click", function () {
+  const popupId = this.closest(".popup-box").id;
+  togglePopup(popupId);
+});
 
+// Scroll ON Top
 let calcScrollValue = () => {
   let scrollProgress = document.getElementById("progress");
   let progressValue = document.getElementById("progress-value");
