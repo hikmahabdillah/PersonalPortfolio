@@ -123,10 +123,11 @@ body::-webkit-scrollbar-thumb {
   margin-left: 15px;
   max-width: 300px;
 }
-.left-content .greeting span h3 {
+.left-content .greeting span h2 {
   color: #f0f0f0;
+  font-size: 1.15em;
 }
-.left-content .greeting h2 {
+.left-content .greeting h2.hello {
   border-left: 4px solid #fff;
   padding-left: 15px;
   font-size: 2em;
