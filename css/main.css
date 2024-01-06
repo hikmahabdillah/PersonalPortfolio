@@ -177,7 +177,7 @@ body::-webkit-scrollbar-thumb {
 }
 .right-content img {
   padding: 25px;
-  max-height: 350px;
+  height: auto;
   max-width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -210,11 +210,13 @@ nav.sticky {
 }
 nav.sticky .brand img {
   max-width: 80px;
+  height: auto;
 }
 
 .brand img {
   padding-left: 20px;
-  max-width: 100px;
+  max-width: 100%;
+  height: auto;
   aspect-ratio: 1/1;
   position: relative;
   transition: 0.5s;
@@ -1115,10 +1117,8 @@ section.contact .contact-right {
 section.contact .contact-right .bg-contact {
   position: absolute;
   z-index: 0;
-  max-width: 600px;
-  max-height: 400px;
   width: 100%;
-  height: 100%;
+  height: auto;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
@@ -1126,8 +1126,8 @@ section.contact .contact-right .bg-contact {
 }
 section.contact .contact-right .vector {
   z-index: 1;
-  max-height: 350px;
   max-width: 100%;
+  height: auto;
   -o-object-fit: cover;
      object-fit: cover;
   filter: drop-shadow(0px 5px 5px, rgb(255, 255, 255));

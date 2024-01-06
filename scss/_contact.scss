@@ -106,18 +106,19 @@
           // top: 10%;
           // left: 12.5%;
           z-index: 0;
-          max-width: 600px;
-          max-height: 400px;
+          // max-width: 600px;
+          // max-height: 400px;
           width: 100%;
-          height: 100%;
+          height: auto;
           object-fit: cover;
           object-position: center;
           // animation: rotatebg 5s ease-in-out infinite;
         }
         .vector {
           z-index: 1;
-          max-height: 350px;
+          // max-height: 350px;
           max-width: 100%;
+          height: auto;
           object-fit: cover;
           filter: drop-shadow(0px 5px 5px, rgb(255, 255, 255));
           animation: upndown 5s ease-in-out infinite;

@@ -22,12 +22,14 @@
     max-height: 80px;
     .brand img {
       max-width: 80px;
+      height: auto;
     }
   }
 
   .brand img {
     padding-left: 20px;
-    max-width: 100px;
+    max-width: 100%;
+    height: auto;
     aspect-ratio: 1 /1;
     position: relative;
     transition: 0.5s;
