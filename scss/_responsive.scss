@@ -138,7 +138,7 @@
     .main-header {
       width: auto;
       padding: 20px;
-      padding-top: 110px;
+      padding-top: 130px;
       .right-content {
         img {
           padding: 0px;
@@ -168,16 +168,32 @@
         }
         .expage {
           margin: 30px 0px;
+          .employment {
+            max-width: 370px;
+            ul {
+              overflow-x: scroll;
+              width: 100%;
+              display: flex;
+              li {
+                width: max-content;
+                white-space: nowrap;
+              }
+            }
+          }
         }
       }
     }
     section {
       &.projects {
+        padding: 40px;
         .contain {
-          height: 100vh;
+          height: 75vh;
           display: flex;
           flex-wrap: wrap;
           flex-direction: column;
+        }
+        .panel {
+          flex: 1;
         }
       }
     }
@@ -212,6 +228,49 @@
     nav ul.slide {
       transform: translateX(0);
       opacity: 1;
+    }
+
+    section {
+      &.experiences {
+        .expage {
+          margin: 30px 0px;
+          .employment {
+            max-width: 300px;
+            ul {
+              overflow-x: scroll;
+              width: 100%;
+              display: flex;
+              li {
+                width: max-content;
+                white-space: nowrap;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// mobile size M
+@media screen and (max-width: 400px) {
+  section {
+    &#experiences {
+      .expage {
+        margin: 30px 0px;
+        .employment {
+          max-width: 250px;
+          ul {
+            overflow-x: scroll;
+            width: 100%;
+            display: flex;
+            li {
+              width: max-content;
+              white-space: nowrap;
+            }
+          }
+        }
+      }
     }
   }
 }

@@ -1,4 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@800&family=Poppins:wght@200&family=Poppins:wght@500&family=Raleway:wght@800&family=Mulish:wght@500&family=Raleway:wght@500&family=Teko&display=swap");
+@media screen and (max-width: 400px) {
+  section#experiences .expage {
+    margin: 30px 0px;
+  }
+  section#experiences .expage .employment {
+    max-width: 250px;
+  }
+  section#experiences .expage .employment ul {
+    overflow-x: scroll;
+    width: 100%;
+    display: flex;
+  }
+  section#experiences .expage .employment ul li {
+    width: -moz-max-content;
+    width: max-content;
+    white-space: nowrap;
+  }
+}
 :root {
   --dark-navy: #020c1b;
   --navy: #15132a;
@@ -1324,7 +1342,7 @@ footer p span {
   .main-header {
     width: auto;
     padding: 20px;
-    padding-top: 110px;
+    padding-top: 130px;
   }
   .main-header .right-content img {
     padding: 0px;
@@ -1349,11 +1367,30 @@ footer p span {
   section.experiences .expage {
     margin: 30px 0px;
   }
+  section.experiences .expage .employment {
+    max-width: 370px;
+  }
+  section.experiences .expage .employment ul {
+    overflow-x: scroll;
+    width: 100%;
+    display: flex;
+  }
+  section.experiences .expage .employment ul li {
+    width: -moz-max-content;
+    width: max-content;
+    white-space: nowrap;
+  }
+  section.projects {
+    padding: 40px;
+  }
   section.projects .contain {
-    height: 100vh;
+    height: 75vh;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+  }
+  section.projects .panel {
+    flex: 1;
   }
 }
 /* mobile size */
@@ -1382,5 +1419,21 @@ footer p span {
   nav ul.slide {
     transform: translateX(0);
     opacity: 1;
+  }
+  section.experiences .expage {
+    margin: 30px 0px;
+  }
+  section.experiences .expage .employment {
+    max-width: 300px;
+  }
+  section.experiences .expage .employment ul {
+    overflow-x: scroll;
+    width: 100%;
+    display: flex;
+  }
+  section.experiences .expage .employment ul li {
+    width: -moz-max-content;
+    width: max-content;
+    white-space: nowrap;
   }
 }/*# sourceMappingURL=main.css.map */
