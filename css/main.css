@@ -1312,7 +1312,7 @@ footer p span {
     transition: all 1s;
     opacity: 0;
     height: 50vh;
-    width: 80vw;
+    width: 100vw;
     border-radius: 20px 0px 0px 20px;
   }
   .brand img {
