@@ -80,7 +80,7 @@
     }
     nav ul li a {
       text-decoration: none;
-      color: rgb(0, 0, 0);
+      color: #ffffff;
       font-size: 0.9em;
       transition: 0.5s;
       align-self: center;
@@ -100,7 +100,7 @@
       position: fixed;
     }
     nav ul.slide {
-      transform: translateY(0);
+      transform: translateX(0);
       opacity: 1;
       z-index: 9;
     }
@@ -111,30 +111,28 @@
     nav ul {
       position: absolute;
       right: 0;
-      flex-direction: column;
       top: 0;
-      height: max-content;
+      flex-direction: column;
       align-items: center;
       justify-content: space-evenly;
-      background: rgba(255, 255, 255, 0.25);
+      background-color: #0d204de3;
       box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
       backdrop-filter: blur(4.5px);
       -webkit-backdrop-filter: blur(4.5px);
-      /* border-radius: 10px; */
       border: 1px solid rgba(255, 255, 255, 0.18);
       z-index: -1;
-      transform: translateY(-100%);
+      transform: translateX(100%);
       transition: all 1s;
       opacity: 0;
-      max-height: 500px;
-      min-height: 100%;
+      height: 50vh;
+      width: 80vw;
+      border-radius: 20px 0px 0px 20px;
     }
     .brand img {
       max-width: 100px;
       aspect-ratio: 1 /1;
       align-self: center;
       padding-left: 0px;
-      float: left;
     }
   }
 

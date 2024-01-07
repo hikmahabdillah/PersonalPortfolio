@@ -76,9 +76,10 @@
   .menu-toggle {
     display: none;
     flex-direction: column;
-    height: 20px;
+    height: 14px;
     justify-content: space-between;
     position: relative;
+    transition: all 0.5s;
   }
 
   .menu-toggle span {
@@ -90,28 +91,41 @@
     transition: all 0.5s;
   }
 
+  .openNav {
+    height: 20px;
+    transition: all 0.5s;
+  }
+
+  .menu-toggle span:nth-child(3) {
+    width: 18px;
+    margin-left: 10px;
+  }
+
   /* Hamburger menu animation */
 
   .menu-toggle span:nth-child(2) {
     /* untuk menentukan poros dipojok kiri */
     transform-origin: 0 0;
   }
-  .menu-toggle span:nth-child(4) {
+  .menu-toggle span:nth-child(3) {
     /* untuk menentukan poros dipojok kanan */
     transform-origin: 0 100%;
   }
   /* jika input pada class menu toglgle dicheck, maka cari css yang merupakan sibling yang merupakan span yang merupakan anak ke-2 */
+
+  .menu-toggle input:checked {
+    height: 20px;
+  }
+
   .menu-toggle input:checked ~ span:nth-child(2) {
     transform: rotate(45deg) translate(-1px, -1px);
     background-color: #fff;
   }
-  .menu-toggle input:checked ~ span:nth-child(3) {
-    opacity: 0;
-    transform: scale(0);
-  }
 
-  .menu-toggle input:checked ~ span:nth-child(4) {
+  .menu-toggle input:checked ~ span:nth-child(3) {
     transform: rotate(-45deg) translate(-1px, 0);
     background-color: #fff;
+    width: 28px;
+    margin-left: 0px;
   }
 }
