@@ -6,7 +6,8 @@
     }
     .right-content {
       order: 1;
-      margin: 20px;
+      // margin: 20px;
+      margin: 0px;
     }
   }
 
@@ -133,6 +134,52 @@
       aspect-ratio: 1 /1;
       align-self: center;
       padding-left: 0px;
+    }
+    .main-header {
+      width: auto;
+      padding: 20px;
+      padding-top: 110px;
+      .right-content {
+        img {
+          padding: 0px;
+          margin: 0px;
+        }
+      }
+    }
+    .skills {
+      .listAll {
+        padding: 0px !important;
+        .listTools {
+          left: 0;
+        }
+      }
+    }
+    section {
+      &.experiences {
+        .head-exp {
+          display: flex;
+          flex-direction: column;
+          justify-items: start;
+          margin: 0;
+          h2 {
+            font-size: 2.5em;
+            padding-bottom: 0px;
+          }
+        }
+        .expage {
+          margin: 30px 0px;
+        }
+      }
+    }
+    section {
+      &.projects {
+        .contain {
+          height: 100vh;
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: column;
+        }
+      }
     }
   }
 
