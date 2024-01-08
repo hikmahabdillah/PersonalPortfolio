@@ -190,6 +190,12 @@ let calcScrollValue = () => {
   });
   scrollProgress.style.background = `conic-gradient(#00327c ${scrollValue}%,#29cbef ${scrollValue}%)`;
 };
+
+let brand = document.getElementById("brand");
+
+brand.addEventListener("click", () => {
+  document.documentElement.scrollTop = 0;
+});
 // window.onscroll = calcScrollValue;
 // window.onload = calcScrollValue;
 

@@ -85,6 +85,9 @@
             &:hover {
               transform: scale(1.1) translateY(3px);
             }
+            &:nth-child(3) img {
+              transform: translateY(-5px);
+            }
           }
         }
       }

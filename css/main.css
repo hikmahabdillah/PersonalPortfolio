@@ -238,6 +238,7 @@ nav.sticky .brand img {
   aspect-ratio: 1/1;
   position: relative;
   transition: 0.5s;
+  cursor: pointer;
   /* align-self: center; */
 }
 
@@ -1130,6 +1131,9 @@ section.contact .contact-left .socials-media a {
 }
 section.contact .contact-left .socials-media a:hover {
   transform: scale(1.1) translateY(3px);
+}
+section.contact .contact-left .socials-media a:nth-child(3) img {
+  transform: translateY(-5px);
 }
 section.contact hr {
   height: 1px;
