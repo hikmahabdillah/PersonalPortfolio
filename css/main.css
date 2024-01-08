@@ -1231,13 +1231,6 @@ footer p span {
   }
 }
 @media screen and (max-width: 520px) {
-  .contain {
-    width: 100vw;
-  }
-  .panel:nth-of-type(4),
-  .panel:nth-of-type(5) {
-    display: none;
-  }
   .left-content .greeting h2 {
     font-size: 1.5em !important;
   }
@@ -1259,14 +1252,37 @@ footer p span {
     top: -15% !important;
     justify-items: center;
   }
-  .right-about .main-about h4 {
-    font-size: 1.25em !important;
+  section.projects .panel h3 {
+    font-size: 1.2em !important;
   }
-  .right-about .main-about h2 {
-    font-size: 3.5em !important;
+  section.projects .panel p {
+    font-size: 0.9em !important;
+  }
+  section.projects .panel span {
+    font-size: 0.9em !important;
+  }
+  section.projects .panel span:last-of-type img {
+    right: 100px;
+    top: 1px;
+  }
+  section.projects .popup .content {
+    max-width: 270px;
+  }
+  section.projects .popup .content .detail {
+    flex-wrap: wrap-reverse;
+  }
+  section.projects .popup .content p {
+    font-size: 0.9em;
   }
 }
 @media screen and (max-width: 768px) {
+  .contain {
+    width: 100vw;
+  }
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) {
+    display: none;
+  }
   .menu-toggle input {
     position: absolute;
     width: 40px;
@@ -1380,6 +1396,15 @@ footer p span {
     width: max-content;
     white-space: nowrap;
   }
+  section.experiences .expage .content-employ {
+    padding: 30px;
+  }
+  section.experiences .expage .content-employ h3 {
+    color: #f0f0f0;
+    font-size: 1.3em !important;
+    font-weight: normal;
+    max-width: 100% !important;
+  }
   section.projects {
     padding: 40px;
   }
@@ -1391,6 +1416,15 @@ footer p span {
   }
   section.projects .panel {
     flex: 1;
+  }
+  .right-about .main-about h1 {
+    font-size: 1.25em !important;
+  }
+  .right-about .main-about h2 {
+    font-size: 3.5em !important;
+  }
+  .right-about .main-about p {
+    font-size: 0.9em !important;
   }
 }
 /* mobile size */
@@ -1435,5 +1469,27 @@ footer p span {
     width: -moz-max-content;
     width: max-content;
     white-space: nowrap;
+  }
+  .left-content .greeting h2 {
+    font-size: 1.5em !important;
+  }
+  .left-content .greeting h1 {
+    font-size: 2.5em;
+  }
+  .left-content .greeting h2.hello {
+    font-size: 1em;
+  }
+  .left-content .greeting .role span {
+    padding: 10px 30px 10px 10px;
+  }
+  .left-content .greeting .role span h2 {
+    font-size: 1em !important;
+    white-space: nowrap;
+  }
+  .right-about .main-about h4 {
+    font-size: 1.25em !important;
+  }
+  .right-about .main-about h2 {
+    font-size: 3.5em !important;
   }
 }/*# sourceMappingURL=main.css.map */
