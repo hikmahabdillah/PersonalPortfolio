@@ -8,12 +8,7 @@
 @use "experiences" as ex;
 @use "projects" as pr;
 @use "contact" as c;
-// @use "projectcard" as pc;
 
-:root {
-  --dark-navy: #020c1b;
-  --navy: #15132a;
-}
 html {
   -webkit-scroll-behavior: smooth;
   -moz-scroll-behavior: smooth;
@@ -75,7 +70,7 @@ $text-color: #fff;
 //   }
 // }
 
-// HEADER
+// CONTAINER
 .container {
   max-height: 100%;
   header {
@@ -115,15 +110,8 @@ $text-color: #fff;
   z-index: 2;
 }
 
+// HEADER
 @include h.mainHeader();
-
-.left-content {
-  @include h.leftContent();
-}
-
-.right-content {
-  @include h.rightContent();
-}
 
 // NAVBAR CSS
 @include n.navbarMenu();
@@ -142,9 +130,6 @@ $text-color: #fff;
 
 // CONTACT
 @include c.contact();
-
-// PROJECT CARD
-// @include pc.projectcard();
 
 // ANIMATION CSS
 @include a.allAnimation();

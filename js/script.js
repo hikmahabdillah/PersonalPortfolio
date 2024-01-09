@@ -16,6 +16,8 @@ function handleClick() {
   });
   event.currentTarget.classList.add("selected");
 }
+
+// get element at skills page
 let tech = document.getElementById("techS");
 let tool = document.getElementById("tools");
 let ltech = document.getElementById("listTech");
@@ -46,11 +48,14 @@ let prevScrollPos = window.pageYOffset;
 
 const handleLoad = () => {
   let header = document.querySelector("nav");
-  header.classList.toggle("sticky", window.scrollY > 0);
-  calcScrollValue();
+  header.style.transform = "translateY(0)";
 };
 
 const handleScroll = () => {
+  let header = document.querySelector("nav");
+  header.classList.toggle("sticky", window.scrollY > 0);
+
+  calcScrollValue();
   // Your existing scroll code here
   const currentScrollPos = window.pageYOffset;
 
@@ -67,7 +72,7 @@ const handleScroll = () => {
 };
 
 // Assign the combined function to both window.onscroll and window.onload
-window.addEventListener("scroll", handleLoad, handleScroll);
+window.addEventListener("scroll", handleScroll);
 window.addEventListener("load", handleLoad, handleScroll);
 
 // EXPERIENCES LI
@@ -138,7 +143,6 @@ function togglePopup(popupId) {
   const popup = document.getElementById(popupId);
   if (popup) {
     popup.classList.toggle("active");
-    navbar.style.transform = "translateY(-100%)";
   }
 }
 
@@ -153,8 +157,6 @@ document.querySelectorAll(".popup-btn").forEach((link) => {
 // Menambahkan event listeners untuk close button di setiap popup
 document.querySelectorAll(".close-btn").forEach((closeButton) => {
   closeButton.addEventListener("click", function () {
-    navbar.style.transform = "translateY(0)";
-    header.classList.toggle("sticky", window.scrollY > 0);
     const popupId = this.closest(".popup-").id;
     togglePopup(popupId);
   });
@@ -162,8 +164,6 @@ document.querySelectorAll(".close-btn").forEach((closeButton) => {
 
 document.querySelectorAll(".overlay").forEach((overlays) => {
   overlays.addEventListener("click", function () {
-    navbar.style.transform = "translateY(0)";
-    header.classList.toggle("sticky", window.scrollY > 0);
     const popupId = this.closest(".popup-").id;
     togglePopup(popupId);
   });
@@ -196,8 +196,3 @@ let brand = document.getElementById("brand");
 brand.addEventListener("click", () => {
   document.documentElement.scrollTop = 0;
 });
-// window.onscroll = calcScrollValue;
-// window.onload = calcScrollValue;
-
-//window.addEventListener("scroll", handleScroll1, handleScroll2);
-//window.addEventListener("load", handleScroll1, handleScroll2);
