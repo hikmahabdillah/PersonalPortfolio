@@ -506,9 +506,6 @@ section.skills .listTools .minicard {
   border-left: 5px solid #2978ef;
   transition: 0.5s;
 }
-section.skills .listTools .minicard:hover {
-  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.5);
-}
 section.skills .listTools .minicard:hover img {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
   transform: translateY(-5px) scale(1.05);
@@ -569,9 +566,6 @@ section.skills .listTech .minicard {
   align-items: center;
   border-left: 5px solid #ef5929;
   transition: 0.5s;
-}
-section.skills .listTech .minicard:hover {
-  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.5);
 }
 section.skills .listTech .minicard:hover img {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
