@@ -546,7 +546,7 @@ section.skills .listTools .minicard span.mskill {
   gap: 3px;
 }
 section.skills .listTools .minicard span.mskill p {
-  color: #737373;
+  color: #4f4f4f;
 }
 section.skills .listTech {
   display: flex;
@@ -658,7 +658,7 @@ section.skills .listTech .minicard span.mskill {
   gap: 3px;
 }
 section.skills .listTech .minicard span.mskill p {
-  color: #737373;
+  color: #4f4f4f;
 }
 
 section {
