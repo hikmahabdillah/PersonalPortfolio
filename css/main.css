@@ -124,15 +124,11 @@ body::-webkit-scrollbar-thumb {
 .main-header .left-content .greeting div.role {
   display: flex;
 }
-.main-header .left-content .greeting div.bord {
-  border-left: 4px solid #fff;
-}
 .main-header .left-content .greeting span {
   display: flex;
   border: 4px solid #fff;
   border-bottom-right-radius: 100px;
   padding: 5px 50px 5px 30px;
-  margin-left: 15px;
   max-width: 300px;
 }
 .main-header .left-content .greeting span h2 {
@@ -140,16 +136,12 @@ body::-webkit-scrollbar-thumb {
   font-size: 1.15em;
 }
 .main-header .left-content .greeting h2.hello {
-  border-left: 4px solid #fff;
-  padding-left: 15px;
   font-size: 2em;
   color: #fff;
   font-family: "Mulish", sans-serif;
   height: 1.1em;
 }
 .main-header .left-content .greeting h1 {
-  border-left: 4px solid #fff;
-  padding-left: 15px;
   font-size: 3em;
   background: linear-gradient(to right, #0159de, #29cbef);
   -webkit-background-clip: text;
@@ -167,11 +159,11 @@ body::-webkit-scrollbar-thumb {
   color: #fff;
   padding: 10px;
   margin-top: 20px;
+  border: none;
   border-radius: 10px;
-  border: 3px solid rgba(41, 203, 239, 0);
   max-width: 125px;
   background: linear-gradient(to right bottom, #0159de, #29cbef);
-  transition: 0.5s;
+  transition: all 0.5s ease-in-out;
 }
 .main-header .left-content .greeting button a {
   width: 125px;
@@ -179,8 +171,7 @@ body::-webkit-scrollbar-thumb {
   color: #fff;
 }
 .main-header .left-content .greeting button:hover {
-  background-color: rgba(32, 31, 31, 0);
-  border: 3px solid #fff;
+  background: linear-gradient(to right bottom, #29cbef, #015ade);
   transform: scale(1.05);
 }
 .main-header .right-content {
