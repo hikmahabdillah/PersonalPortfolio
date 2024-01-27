@@ -766,12 +766,12 @@ section.projects .description {
   max-width: 550px;
 }
 section.projects a {
-  color: #e4e4e4;
+  color: #f5f5f5;
   text-decoration: none;
   text-align: center;
   align-self: center;
   padding: 20px;
-  background-color: #2960ef;
+  background-color: #1140ca;
   border-radius: 10px;
   font-weight: 600;
   transition: 0.3s;
