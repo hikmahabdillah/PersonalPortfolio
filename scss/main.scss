@@ -10,32 +10,19 @@
 @use "contact" as c;
 
 html {
-  -webkit-scroll-behavior: smooth;
-  -moz-scroll-behavior: smooth;
-  -ms-scroll-behavior: smooth;
+  // -webkit-scroll-behavior: smooth;
+  // -moz-scroll-behavior: smooth;
+  // -ms-scroll-behavior: smooth;
   scroll-behavior: smooth;
-}
-
-// font
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@800&family=Poppins:wght@200&family=Poppins:wght@500&family=Raleway:wght@800&family=Mulish:wght@500&family=Raleway:wght@500&family=Teko&display=swap");
-
-// reset and default
-* {
-  margin: 0;
-  padding: 0;
-}
-body {
   height: 100%;
-  background-color: #0f172a;
-  font-family: "Raleway", sans-serif;
-  -webkit-scrollbar-width: thin;
-  -moz-scrollbar-width: thin;
-  -ms-scrollbar-width: thin;
+  // -webkit-scrollbar-width: thin;
+  // -moz-scrollbar-width: thin;
+  // -ms-scrollbar-width: thin;
   scrollbar-width: thin;
   scrollbar-color: #0a1838 #00327c;
 
   &::-webkit-scrollbar {
-    width: 10px;
+    width: 15px;
   }
 
   /*!sc*/
@@ -48,8 +35,21 @@ body {
     opacity: 1;
     background-color: #00327c;
     border: 3px solid #0a1838;
-    border-radius: 10px;
+    border-radius: 10px !important;
   }
+}
+
+// font
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@800&family=Poppins:wght@200&family=Poppins:wght@500&family=Raleway:wght@800&family=Mulish:wght@500&family=Raleway:wght@500&family=Teko&display=swap");
+
+// reset and default
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #0f172a;
+  font-family: "Raleway", sans-serif;
 }
 
 // COLOR VARIABLE
