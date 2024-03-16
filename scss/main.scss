@@ -1,4 +1,4 @@
-// @use "intro" as i;
+@use "intro" as i;
 @use "home" as h;
 @use "responsive" as r;
 @use "animation" as a;
@@ -10,19 +10,8 @@
 @use "contact" as c;
 
 html {
-  // -webkit-scroll-behavior: smooth;
-  // -moz-scroll-behavior: smooth;
-  // -ms-scroll-behavior: smooth;
-  scroll-behavior: smooth;
-  height: 100%;
-  // -webkit-scrollbar-width: thin;
-  // -moz-scrollbar-width: thin;
-  // -ms-scrollbar-width: thin;
-  scrollbar-width: thin;
-  scrollbar-color: #0a1838 #00327c;
-
   &::-webkit-scrollbar {
-    width: 15px;
+    width: 10px;
   }
 
   /*!sc*/
@@ -56,19 +45,6 @@ body {
 $primary-color: #29cbef;
 $secondary-color: #201f1f;
 $text-color: #fff;
-
-// INTRO
-// .box-intro {
-//   @include i.box-intro();
-//   .logo-intro {
-//     @include i.logo();
-//     z-index: -1;
-//   }
-//   h2 {
-//     @include i.text();
-//     z-index: -1;
-//   }
-// }
 
 // CONTAINER
 .container {
@@ -136,3 +112,6 @@ $text-color: #fff;
 
 // RESPONSIVE CSS
 @include r.sizeRes();
+
+// INTRO
+@include i.myintro();

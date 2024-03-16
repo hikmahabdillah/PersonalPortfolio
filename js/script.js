@@ -196,3 +196,17 @@ let brand = document.getElementById("brand");
 brand.addEventListener("click", () => {
   document.documentElement.scrollTop = 0;
 });
+
+// GSAP ANIMATION
+const boxIntro = document.querySelector(".box-intro");
+const logoIntro = document.querySelector(".box-intro img");
+window.addEventListener("load", () => {
+  // if page is fully loaded, remove preloader
+  gsap.to(boxIntro, { opacity: 0, onComplete: hidePreloader });
+  gsap.to(logoIntro, { opacity: 0, onComplete: hidePreloader });
+});
+
+const hidePreloader = () => {
+  boxIntro.style.display = "none";
+  logoIntro.style.display = "none";
+};

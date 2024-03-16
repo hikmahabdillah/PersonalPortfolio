@@ -17,15 +17,11 @@
   }
 }
 html {
-  scroll-behavior: smooth;
-  height: 100%;
-  scrollbar-width: thin;
-  scrollbar-color: #0a1838 #00327c;
   /*!sc*/
   /*!sc*/
 }
 html::-webkit-scrollbar {
-  width: 15px;
+  width: 10px;
 }
 html::-webkit-scrollbar-track {
   background: #0a1838;
@@ -1144,22 +1140,13 @@ footer p span {
     transform: rotate(180deg);
   }
 }
-@keyframes changeImage {
+@keyframes loader {
   0%, 100% {
-    opacity: 0;
+    scale: 1;
+    opacity: 0.6;
   }
   50% {
-    background-image: url("../img/h44-b.png");
-    image-rendering: auto;
-    will-change: background;
-    opacity: 1;
-  }
-}
-@keyframes logoName {
-  0%, 100% {
-    opacity: 0;
-  }
-  50% {
+    scale: 1.1;
     opacity: 1;
   }
 }
@@ -1442,4 +1429,25 @@ footer p span {
   .right-about .main-about h2 {
     font-size: 3.5em !important;
   }
+}
+.box-intro {
+  background-color: #fff;
+  z-index: 1000;
+  position: fixed;
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.box-intro img {
+  image-rendering: auto;
+  z-index: 2000;
+  object-fit: cover;
+  object-position: center;
+  overflow: hidden;
+  opacity: 1;
+  animation: loader 1.5s infinite;
 }/*# sourceMappingURL=main.css.map */

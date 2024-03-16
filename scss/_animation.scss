@@ -19,25 +19,14 @@
     }
   }
 
-  @keyframes changeImage {
+  @keyframes loader {
     0%,
     100% {
-      opacity: 0;
+      scale: 1;
+      opacity: 0.6;
     }
     50% {
-      background-image: url("../img/h44-b.png");
-      image-rendering: auto;
-      will-change: background;
-      opacity: 1;
-    }
-  }
-
-  @keyframes logoName {
-    0%,
-    100% {
-      opacity: 0;
-    }
-    50% {
+      scale: 1.1;
       opacity: 1;
     }
   }

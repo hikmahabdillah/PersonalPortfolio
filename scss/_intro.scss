@@ -1,7 +1,7 @@
 @mixin myintro {
   .box-intro {
     background-color: #fff;
-    z-index: 9999;
+    z-index: 1000;
     position: fixed;
     opacity: 1;
     width: 100%;
@@ -10,25 +10,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    animation: fadeOut;
-    animation-fill-mode: both;
-    animation-iteration-count: 1;
-    animation-duration: 2s;
-    animation-delay: 3s;
-    .logo-intro {
-      background-image: url("../img/h44b.png");
+    img {
+      // background-image: url(".././img/h44-b.webp");
       image-rendering: auto;
-      z-index: -1;
-      will-change: background;
-      width: 300px;
-      height: 300px;
-      background-size: cover;
+      z-index: 2000;
+      object-fit: cover;
+      object-position: center;
       overflow: hidden;
-      transform: translateY(-50px);
-      opacity: 0;
-      animation: changeImage 4s;
-      -moz-animation: changeImage 4s;
-      will-change: transform;
+      opacity: 1;
+      animation: loader 1.5s infinite;
     }
   }
 }
