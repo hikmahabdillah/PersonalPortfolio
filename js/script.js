@@ -202,8 +202,10 @@ const boxIntro = document.querySelector(".box-intro");
 const logoIntro = document.querySelector(".box-intro img");
 window.addEventListener("load", () => {
   // if page is fully loaded, remove preloader
-  gsap.to(boxIntro, { opacity: 0, onComplete: hidePreloader });
-  gsap.to(logoIntro, { opacity: 0, onComplete: hidePreloader });
+  setTimeout(() => {
+    gsap.to(boxIntro, { opacity: 0, onComplete: hidePreloader });
+    gsap.to(logoIntro, { opacity: 0, onComplete: hidePreloader });
+  }, 1500);
 });
 
 const hidePreloader = () => {
