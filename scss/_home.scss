@@ -39,21 +39,24 @@
         justify-content: start;
         div.role {
           display: flex;
-        }
-        // div.bord {
-        //   // border-left: 4px solid #fff;
-        // }
-        span {
-          display: flex;
-          border: 4px solid #fff;
-          // border-top-right-radius: 45px;
-          border-bottom-right-radius: 100px;
-          padding: 5px 50px 5px 30px;
-          max-width: 300px;
-
+          align-items: center;
+          gap: 10px;
           h2 {
-            color: #f0f0f0;
-            font-size: 1.15em;
+            // background: linear-gradient(to right, #29cbef, #8550f5);
+            // color: transparent;
+            // -webkit-background-clip: text;
+            // background-clip: text;
+            color: #fff;
+            font-size: 1.2em;
+            font-weight: 600;
+            white-space: nowrap;
+          }
+          hr {
+            height: 1px;
+            width: 100%;
+            background-color: #fff;
+            color: #fff;
+            border: 1px solid #fff;
           }
         }
         h2.hello {
@@ -76,28 +79,28 @@
             color: #f0f0f0 !important;
           }
         }
-        button {
-          font-family: "Poppins", sans-serif;
-          font-weight: bold;
-          color: #fff;
-          padding: 10px;
-          margin-top: 20px;
-          border: none;
-          border-radius: 10px;
-          max-width: 125px;
-          // max-width: 150px;
-          background: linear-gradient(to right bottom, #0159de, #29cbef);
-          transition: all 0.5s ease-in-out;
-          a {
-            width: 125px;
-            text-decoration: none;
-            color: #fff;
-          }
-          &:hover {
-            background: linear-gradient(to right bottom, #29cbef, #015ade);
-            transform: scale(1.05);
-          }
-        }
+        // button {
+        //   font-family: "Poppins", sans-serif;
+        //   font-weight: bold;
+        //   color: #fff;
+        //   padding: 10px;
+        //   margin-top: 20px;
+        //   border: none;
+        //   border-radius: 10px;
+        //   max-width: 125px;
+        //   // max-width: 150px;
+        //   background: linear-gradient(to right bottom, #0159de, #29cbef);
+        //   transition: all 0.3s ease-in-out;
+        //   a {
+        //     width: 125px;
+        //     text-decoration: none;
+        //     color: #fff;
+        //   }
+        //   &:hover {
+        //     // background: linear-gradient(to right bottom, #29cbef, #015ade);
+        //     transform: scale(1.05) rotate(10deg);
+        //   }
+        // }
       }
     }
     .right-content {

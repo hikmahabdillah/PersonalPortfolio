@@ -87,7 +87,6 @@ let liSkipper = document.getElementById("liSkipper");
 // Menambahkan event listener untuk setiap elemen <li>
 window.onload = function () {
   liSmkn4.click();
-
   tech.click();
   ltool.style.transform = "scale(0)";
 };
@@ -200,12 +199,17 @@ brand.addEventListener("click", () => {
 // GSAP ANIMATION
 const boxIntro = document.querySelector(".box-intro");
 const logoIntro = document.querySelector(".box-intro img");
-window.addEventListener("load", () => {
-  // if page is fully loaded, remove preloader
+
+const intro = () => {
   setTimeout(() => {
     gsap.to(boxIntro, { opacity: 0, onComplete: hidePreloader });
     gsap.to(logoIntro, { opacity: 0, onComplete: hidePreloader });
   }, 1500);
+};
+
+window.addEventListener("load", () => {
+  // if page is fully loaded, remove preloader
+  intro();
 });
 
 const hidePreloader = () => {

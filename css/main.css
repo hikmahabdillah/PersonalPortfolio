@@ -17,6 +17,7 @@
   }
 }
 html {
+  scroll-behavior: smooth;
   /*!sc*/
   /*!sc*/
 }
@@ -24,7 +25,7 @@ html::-webkit-scrollbar {
   width: 10px;
 }
 html::-webkit-scrollbar-track {
-  background: #0a1838;
+  background: transparent;
 }
 html::-webkit-scrollbar-thumb {
   opacity: 1;
@@ -110,17 +111,21 @@ body {
 }
 .main-header .left-content .greeting div.role {
   display: flex;
+  align-items: center;
+  gap: 10px;
 }
-.main-header .left-content .greeting span {
-  display: flex;
-  border: 4px solid #fff;
-  border-bottom-right-radius: 100px;
-  padding: 5px 50px 5px 30px;
-  max-width: 300px;
+.main-header .left-content .greeting div.role h2 {
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: 600;
+  white-space: nowrap;
 }
-.main-header .left-content .greeting span h2 {
-  color: #f0f0f0;
-  font-size: 1.15em;
+.main-header .left-content .greeting div.role hr {
+  height: 1px;
+  width: 100%;
+  background-color: #fff;
+  color: #fff;
+  border: 1px solid #fff;
 }
 .main-header .left-content .greeting h2.hello {
   font-size: 2em;
@@ -139,27 +144,6 @@ body {
 .main-header .left-content .greeting h1::before {
   content: "I'M ";
   color: #f0f0f0 !important;
-}
-.main-header .left-content .greeting button {
-  font-family: "Poppins", sans-serif;
-  font-weight: bold;
-  color: #fff;
-  padding: 10px;
-  margin-top: 20px;
-  border: none;
-  border-radius: 10px;
-  max-width: 125px;
-  background: linear-gradient(to right bottom, #0159de, #29cbef);
-  transition: all 0.5s ease-in-out;
-}
-.main-header .left-content .greeting button a {
-  width: 125px;
-  text-decoration: none;
-  color: #fff;
-}
-.main-header .left-content .greeting button:hover {
-  background: linear-gradient(to right bottom, #29cbef, #015ade);
-  transform: scale(1.05);
 }
 .main-header .right-content {
   text-align: center;
@@ -245,6 +229,52 @@ nav ul li a:hover {
 
 menu-item a.active {
   color: #ff6600; /* Warna aktif */
+}
+
+.switch {
+  position: relative;
+  height: 1.5rem;
+  width: 2.7rem;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  border-radius: 9999px;
+  background-color: #0a1838;
+  transition: all 0.3s ease;
+}
+
+.switch:checked {
+  background-color: rgb(255, 255, 255);
+}
+
+.switch::before {
+  position: absolute;
+  content: "";
+  left: -0.1rem;
+  top: 0rem;
+  display: block;
+  height: 1.4rem;
+  width: 1.4rem;
+  cursor: pointer;
+  border: 1px solid rgba(100, 116, 139, 0.527);
+  border-radius: 9999px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 3px 10px rgba(100, 116, 139, 0.327);
+  transition: all 0.3s ease;
+}
+
+.switch:hover::before {
+  box-shadow: 0 0 0px 8px rgba(0, 0, 0, 0.15);
+}
+
+.switch:checked:hover::before {
+  box-shadow: 0 0 0px 8px rgba(32, 151, 243, 0.15);
+}
+
+.switch:checked:before {
+  transform: translateX(100%);
+  border-color: #0a1838;
+  background-color: #0a1838;
 }
 
 /* Hamburger menu */

@@ -10,13 +10,15 @@
 @use "contact" as c;
 
 html {
+  scroll-behavior: smooth;
   &::-webkit-scrollbar {
     width: 10px;
   }
 
   /*!sc*/
   &::-webkit-scrollbar-track {
-    background: #0a1838;
+    // background: #0a1838;
+    background: transparent;
   }
 
   /*!sc*/
