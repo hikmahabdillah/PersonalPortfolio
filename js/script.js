@@ -8,25 +8,23 @@ menuToggle.addEventListener("click", function () {
 });
 
 // SKILL SPAN
-function handleClick() {
-  var spans = document.querySelectorAll(".clickable-span");
-
-  spans.forEach(function (span) {
-    span.classList.remove("selected");
+const spans = document.querySelectorAll(".clickable-span");
+spans.forEach(function (span) {
+  span.addEventListener("click", function (event) {
+    spans.forEach(function (span) {
+      span.classList.remove("selected");
+    });
+    event.currentTarget.classList.add("selected");
   });
-  event.currentTarget.classList.add("selected");
-}
+});
 
 // get element at skills page
 let tech = document.getElementById("techS");
 let tool = document.getElementById("tools");
 let ltech = document.getElementById("listTech");
 let ltool = document.getElementById("listTools");
-let lall = document.getElementById("listAll");
 
 tech.addEventListener("click", function () {
-  // ltool.style.display = 'none';
-  // ltech.style.display = 'flex';
   ltech.style.transform = "scale(1)";
   ltool.style.transform = "scale(0)";
   ltool.style.filter = "opacity(0)";
@@ -34,8 +32,6 @@ tech.addEventListener("click", function () {
 });
 
 tool.addEventListener("click", function () {
-  // ltech.style.display = 'none';
-  // ltool.style.display = 'flex';
   ltech.style.transform = "scale(0)";
   ltool.style.transform = "scale(1)";
   ltool.style.filter = "opacity(1)";
@@ -44,7 +40,8 @@ tool.addEventListener("click", function () {
 
 // ANIMATION EFFECT ON SCROLL AT NAV
 const navbar = document.getElementById("navbar");
-let prevScrollPos = window.pageYOffset;
+// const ulSlide = document.getElementById("");
+let prevScrollPos = window.scrollY;
 
 const handleLoad = () => {
   let header = document.querySelector("nav");
@@ -57,12 +54,14 @@ const handleScroll = () => {
 
   calcScrollValue();
   // Your existing scroll code here
-  const currentScrollPos = window.pageYOffset;
+  const currentScrollPos = window.scrollY;
 
   if (prevScrollPos > currentScrollPos) {
     navbar.style.transform = "translateY(0)";
+    nav.style.transform = "translateY(0)";
   } else {
     navbar.style.transform = "translateY(-100%)";
+    nav.style.transform = "translateY(-100%)";
   }
 
   prevScrollPos = currentScrollPos;

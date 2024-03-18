@@ -1290,7 +1290,6 @@ footer p span {
     position: fixed;
   }
   nav ul.slide {
-    transform: translateX(0);
     opacity: 1;
     z-index: 9;
   }
@@ -1311,12 +1310,11 @@ footer p span {
     -webkit-backdrop-filter: blur(4.5px);
     border: 1px solid rgba(255, 255, 255, 0.18);
     z-index: -1;
-    transform: translateX(100%);
     transition: all 1s;
     opacity: 0;
-    height: 50vh;
+    height: 60vh;
     width: 100vw;
-    border-radius: 20px 0px 0px 20px;
+    border-radius: 0 0 0 20px;
   }
   .brand img {
     max-width: 100px;
@@ -1327,10 +1325,10 @@ footer p span {
   .main-header {
     width: auto;
     padding: 20px;
-    padding-top: 130px;
+    padding-top: 150px;
   }
   .main-header .right-content img {
-    padding: 0px;
+    padding: 10px;
     margin: 0px;
   }
   .skills .listAll {
@@ -1437,6 +1435,12 @@ footer p span {
     width: max-content;
     white-space: nowrap;
   }
+  .left-content {
+    margin-top: 20px;
+  }
+  .left-content .greeting {
+    gap: 10px;
+  }
   .left-content .greeting h2 {
     font-size: 1.5em !important;
   }
@@ -1446,11 +1450,8 @@ footer p span {
   .left-content .greeting h2.hello {
     font-size: 1em;
   }
-  .left-content .greeting .role span {
-    padding: 10px 30px 10px 10px;
-  }
-  .left-content .greeting .role span h2 {
-    font-size: 1em !important;
+  .left-content .greeting .role h2 {
+    font-size: 1.2em !important;
     white-space: nowrap;
   }
   .right-about .main-about h4 {
