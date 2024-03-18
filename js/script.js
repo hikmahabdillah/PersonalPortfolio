@@ -18,6 +18,17 @@ spans.forEach(function (span) {
   });
 });
 
+// animation nav
+const menu = document.querySelectorAll("nav ul li");
+menu.forEach(function (item) {
+  item.addEventListener("click", function () {
+    if (menuToggle.click()) {
+      nav.classList.remove("slide");
+      menutoggle.classList.remove("openNav");
+    }
+  });
+});
+
 // get element at skills page
 let tech = document.getElementById("techS");
 let tool = document.getElementById("tools");
@@ -39,7 +50,9 @@ tool.addEventListener("click", function () {
 });
 
 // ANIMATION EFFECT ON SCROLL AT NAV
+
 const navbar = document.getElementById("navbar");
+
 // const ulSlide = document.getElementById("");
 let prevScrollPos = window.scrollY;
 
