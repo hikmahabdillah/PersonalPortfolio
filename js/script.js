@@ -18,7 +18,7 @@ spans.forEach(function (span) {
   });
 });
 
-// animation nav
+// event when li on nav ul has clicked
 const menu = document.querySelectorAll("nav ul li");
 menu.forEach(function (item) {
   item.addEventListener("click", function () {
@@ -50,7 +50,6 @@ tool.addEventListener("click", function () {
 });
 
 // ANIMATION EFFECT ON SCROLL AT NAV
-
 const navbar = document.getElementById("navbar");
 
 // const ulSlide = document.getElementById("");
@@ -89,40 +88,22 @@ window.addEventListener("load", handleLoad, handleScroll);
 
 // EXPERIENCES LI
 var listItems = document.querySelectorAll(".employment li");
-let smkn4 = document.getElementById("smkn4");
-let polinema = document.getElementById("polinema");
-let skipper = document.getElementById("skipperwebs");
-let liSmkn4 = document.getElementById("liSmkn4");
-let liPolinema = document.getElementById("liPolinema");
-let liSkipper = document.getElementById("liSkipper");
+var listContent = document.querySelectorAll(".content-employ .content");
 
 // Menambahkan event listener untuk setiap elemen <li>
 window.onload = function () {
-  liSmkn4.click();
+  // liSmkn4.click();
   tech.click();
   ltool.style.transform = "scale(0)";
 };
 
-liSmkn4.addEventListener("click", function () {
-  smkn4.classList.add("act");
-  polinema.classList.remove("act");
-  skipper.classList.remove("act");
-});
-
-liPolinema.addEventListener("click", function () {
-  smkn4.classList.remove("act");
-  polinema.classList.add("act");
-  skipper.classList.remove("act");
-});
-
-liSkipper.addEventListener("click", function () {
-  smkn4.classList.remove("act");
-  polinema.classList.remove("act");
-  skipper.classList.add("act");
-});
-
 listItems.forEach(function (li) {
   li.addEventListener("click", function () {
+    // untuk mendapatkan id dari li yang ada pada ul lisExpe
+    // dimana id yang ada pada li dan content sama
+    let liSelectedId = li.getAttribute("id");
+    // console.log(liSelectedId);
+
     // Menghapus kelas "active" dari semua elemen <li>
     listItems.forEach(function (item) {
       item.classList.remove("active");
@@ -130,6 +111,17 @@ listItems.forEach(function (li) {
 
     // Menambahkan kelas "active" pada elemen <li> yang diklik
     this.classList.add("active");
+
+    listContent.forEach(function (itemCont) {
+      // Menghapus kelas "act" dari semua elemen content
+      itemCont.classList.remove("act");
+
+      // jika item Cont memiliki atribut id yg sama dengan li selected id, maka dia akan menjadi act
+      if (itemCont.getAttribute("id") === liSelectedId) {
+        // Menampilkan konten yang cocok
+        itemCont.classList.add("act");
+      }
+    });
   });
 });
 
@@ -162,6 +154,8 @@ document.querySelectorAll(".popup-btn").forEach((link) => {
   link.addEventListener("click", function () {
     const popupId = this.getAttribute("data-popup-id");
     togglePopup(popupId);
+    navbar.style.transform = "translateY(-100%)";
+    nav.style.transform = "translateY(-100%)";
   });
 });
 
