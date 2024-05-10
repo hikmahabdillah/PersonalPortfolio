@@ -2,9 +2,16 @@
 const menuToggle = document.querySelector(".menu-toggle input");
 const menutoggle = document.querySelector(".menu-toggle");
 const nav = document.querySelector("nav ul");
+let isMenuCheck = false;
 menuToggle.addEventListener("click", function () {
   nav.classList.toggle("slide");
   menutoggle.classList.toggle("openNav");
+  nav.style.transform = "translateY(0)";
+  isMenuCheck = !isMenuCheck;
+
+  isMenuCheck
+    ? (nav.style.transform = "translateY(0)")
+    : (nav.style.transform = "translateY(-100%)");
 });
 
 // SKILL SPAN
@@ -53,24 +60,26 @@ tool.addEventListener("click", function () {
 const navbar = document.getElementById("navbar");
 
 // const ulSlide = document.getElementById("");
-let prevScrollPos = window.scrollY;
 
 const handleLoad = () => {
   let header = document.querySelector("nav");
   header.style.transform = "translateY(0)";
 };
+let prevScrollPos = window.scrollY;
 
 const handleScroll = () => {
   let header = document.querySelector("nav");
   header.classList.toggle("sticky", window.scrollY > 0);
 
   calcScrollValue();
-  // Your existing scroll code here
-  const currentScrollPos = window.scrollY;
+  // existing scroll code here
+  let currentScrollPos = window.scrollY;
 
   if (prevScrollPos > currentScrollPos) {
     navbar.style.transform = "translateY(0)";
-    nav.style.transform = "translateY(0)";
+    isMenuCheck
+      ? (nav.style.transform = "translateY(0)")
+      : (nav.style.transform = "translateY(-100%)");
   } else {
     navbar.style.transform = "translateY(-100%)";
     nav.style.transform = "translateY(-100%)";
