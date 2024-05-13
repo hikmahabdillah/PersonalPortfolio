@@ -2,7 +2,7 @@
   section {
     background-color: #0a1838;
     &.contact {
-      padding: 50px 30px;
+      padding: 20px 30px;
       display: flex;
       flex-wrap: wrap-reverse;
       justify-content: space-evenly;
@@ -13,12 +13,12 @@
         flex-direction: column;
         justify-content: start;
         gap: 15px;
-        padding: 20px;
+        padding: 20px 0;
         max-width: 500px;
+        width: 100%;
         h3 {
           font-size: 2em;
           color: #fff;
-          width: max-content;
           span {
             color: #06acd4;
             border-bottom: 5px solid #06acd4;

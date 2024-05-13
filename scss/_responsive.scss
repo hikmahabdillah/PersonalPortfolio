@@ -40,6 +40,13 @@
       }
     }
     section {
+      &.contact {
+        .contact-left {
+          h3 {
+            font-size: 1.8em;
+          }
+        }
+      }
       &.projects {
         .panel {
           h3 {

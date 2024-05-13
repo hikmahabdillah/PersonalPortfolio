@@ -233,52 +233,6 @@ menu-item a.active {
   color: #ff6600; /* Warna aktif */
 }
 
-.switch {
-  position: relative;
-  height: 1.5rem;
-  width: 2.7rem;
-  cursor: pointer;
-  appearance: none;
-  -webkit-appearance: none;
-  border-radius: 9999px;
-  background-color: #0a1838;
-  transition: all 0.3s ease;
-}
-
-.switch:checked {
-  background-color: rgb(255, 255, 255);
-}
-
-.switch::before {
-  position: absolute;
-  content: "";
-  left: -0.1rem;
-  top: 0rem;
-  display: block;
-  height: 1.4rem;
-  width: 1.4rem;
-  cursor: pointer;
-  border: 1px solid rgba(100, 116, 139, 0.527);
-  border-radius: 9999px;
-  background-color: rgb(255, 255, 255);
-  box-shadow: 0 3px 10px rgba(100, 116, 139, 0.327);
-  transition: all 0.3s ease;
-}
-
-.switch:hover::before {
-  box-shadow: 0 0 0px 8px rgba(0, 0, 0, 0.15);
-}
-
-.switch:checked:hover::before {
-  box-shadow: 0 0 0px 8px rgba(32, 151, 243, 0.15);
-}
-
-.switch:checked:before {
-  transform: translateX(100%);
-  border-color: #0a1838;
-  background-color: #0a1838;
-}
-
 /* Hamburger menu */
 .menu-toggle {
   display: none;
@@ -1029,7 +983,7 @@ section {
   background-color: #0a1838;
 }
 section.contact {
-  padding: 50px 30px;
+  padding: 20px 30px;
   display: flex;
   flex-wrap: wrap-reverse;
   justify-content: space-evenly;
@@ -1040,13 +994,13 @@ section.contact .contact-left {
   flex-direction: column;
   justify-content: start;
   gap: 15px;
-  padding: 20px;
+  padding: 20px 0;
   max-width: 500px;
+  width: 100%;
 }
 section.contact .contact-left h3 {
   font-size: 2em;
   color: #fff;
-  width: max-content;
   padding-bottom: 10px;
   border-bottom: 5px solid #737373;
 }
@@ -1222,6 +1176,9 @@ footer p span {
     aspect-ratio: 3/4;
     top: -15% !important;
     justify-items: center;
+  }
+  section.contact .contact-left h3 {
+    font-size: 1.8em;
   }
   section.projects .panel h3 {
     font-size: 1.2em !important;
