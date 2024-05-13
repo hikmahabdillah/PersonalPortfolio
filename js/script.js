@@ -9,10 +9,17 @@ menuToggle.addEventListener("click", function () {
   nav.style.transform = "translateY(0)";
   isMenuCheck = !isMenuCheck;
 
-  isMenuCheck
-    ? (nav.style.transform = "translateY(0)")
-    : (nav.style.transform = "translateY(-100%)");
+  if (isTabletView()) {
+    isMenuCheck
+      ? (nav.style.transform = "translateY(0)")
+      : (nav.style.transform = "translateY(-100%)");
+  }
 });
+
+function isTabletView() {
+  // Gunakan media query untuk memeriksa lebar layar
+  return window.matchMedia("(max-width: 768px)").matches;
+}
 
 // SKILL SPAN
 const spans = document.querySelectorAll(".clickable-span");
@@ -77,9 +84,12 @@ const handleScroll = () => {
 
   if (prevScrollPos > currentScrollPos) {
     navbar.style.transform = "translateY(0)";
-    isMenuCheck
-      ? (nav.style.transform = "translateY(0)")
-      : (nav.style.transform = "translateY(-100%)");
+    nav.style.transform = "translateY(0)";
+    if (isTabletView()) {
+      isMenuCheck
+        ? (nav.style.transform = "translateY(0)")
+        : (nav.style.transform = "translateY(-100%)");
+    }
   } else {
     navbar.style.transform = "translateY(-100%)";
     nav.style.transform = "translateY(-100%)";
