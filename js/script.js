@@ -111,7 +111,6 @@ var listContent = document.querySelectorAll(".content-employ .content");
 
 // Menambahkan event listener untuk setiap elemen <li>
 window.onload = function () {
-  // liSmkn4.click();
   tech.click();
   ltool.style.transform = "scale(0)";
 };

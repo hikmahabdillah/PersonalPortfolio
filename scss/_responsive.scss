@@ -48,6 +48,11 @@
         }
       }
       &.projects {
+        .head-project {
+          h2 {
+            white-space: wrap;
+          }
+        }
         .panel {
           h3 {
             font-size: 1.2em !important;
@@ -183,6 +188,7 @@
     }
     section {
       &.experiences {
+        padding: 20px;
         .head-exp {
           display: flex;
           flex-direction: column;
@@ -220,8 +226,14 @@
       }
     }
     section {
+      padding: 40px;
       &.projects {
-        padding: 40px;
+        padding: 20px;
+        .head-project {
+          h2 {
+            white-space: wrap;
+          }
+        }
         .contain {
           height: 75vh;
           display: flex;
@@ -326,29 +338,6 @@
         }
         h2 {
           font-size: 3.5em !important;
-        }
-      }
-    }
-  }
-}
-
-// mobile size M
-@media screen and (max-width: 400px) {
-  section {
-    &#experiences {
-      .expage {
-        margin: 30px 0px;
-        .employment {
-          max-width: 250px;
-          ul {
-            overflow-x: scroll;
-            width: 100%;
-            display: flex;
-            li {
-              width: max-content;
-              white-space: nowrap;
-            }
-          }
         }
       }
     }
