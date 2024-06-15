@@ -357,17 +357,18 @@ section.about .right-about .main-about p {
   padding-bottom: 20px;
   border-bottom: 2px solid #125f71;
 }
-section.about .right-about .main-about button {
+section.about .right-about .main-about a {
   font-family: "Poppins", sans-serif;
   font-weight: 600 !important;
   color: #2e2e2e;
   padding: 10px;
-  max-width: 125px;
-  border: none;
+  text-decoration: none;
+  text-align: center;
+  max-width: 150px;
   background-color: #29cbef;
   transition: 0.5s;
 }
-section.about .right-about .main-about button:hover {
+section.about .right-about .main-about a:hover {
   background-color: #fff;
   color: #0b62d5;
   transform: scale(1.05);
@@ -552,27 +553,33 @@ section.skills .listTech .minicard:nth-child(8) img {
   border: 2px solid #8550f5;
 }
 section.skills .listTech .minicard:nth-child(9) {
-  border-left: 5px solid #2978ef;
+  border-left: 5px solid #38bdf8;
 }
 section.skills .listTech .minicard:nth-child(9) img {
-  border: 2px solid #2978ef;
+  border: 2px solid #38bdf8;
 }
 section.skills .listTech .minicard:nth-child(10) {
-  border-left: 5px solid #00a607;
+  border-left: 5px solid #2978ef;
 }
 section.skills .listTech .minicard:nth-child(10) img {
-  border: 2px solid #00a607;
+  border: 2px solid #2978ef;
 }
 section.skills .listTech .minicard:nth-child(11) {
-  border-left: 5px solid #ef5929;
+  border-left: 5px solid #00a607;
 }
 section.skills .listTech .minicard:nth-child(11) img {
-  border: 2px solid #ef5929;
+  border: 2px solid #00a607;
 }
 section.skills .listTech .minicard:nth-child(12) {
-  border-left: 5px solid #616161;
+  border-left: 5px solid #ef5929;
 }
 section.skills .listTech .minicard:nth-child(12) img {
+  border: 2px solid #ef5929;
+}
+section.skills .listTech .minicard:nth-child(13) {
+  border-left: 5px solid #616161;
+}
+section.skills .listTech .minicard:nth-child(13) img {
   border: 2px solid #616161;
 }
 section.skills .listTech .minicard img {
@@ -1043,17 +1050,19 @@ section.contact .contact-left .get-contact .item-contact .text p {
   height: 18px;
 }
 section.contact .contact-left .socials-media {
+  height: 40px;
   display: flex;
-  gap: 12px;
+  gap: 25px;
+  align-items: center;
 }
 section.contact .contact-left .socials-media a {
   transition: 0.5s;
 }
+section.contact .contact-left .socials-media a i {
+  font-size: 40px;
+}
 section.contact .contact-left .socials-media a:hover {
   transform: scale(1.1) translateY(3px);
-}
-section.contact .contact-left .socials-media a:nth-child(3) img {
-  transform: translateY(-5px);
 }
 section.contact hr {
   height: 1px;

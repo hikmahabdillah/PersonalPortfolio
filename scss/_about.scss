@@ -89,14 +89,16 @@
             padding-bottom: 20px;
             border-bottom: 2px solid #125f71;
           }
-          button {
+          a {
             font-family: "Poppins", sans-serif;
             font-weight: 600 !important;
             color: #2e2e2e;
             padding: 10px;
-            max-width: 125px;
-            border: none;
-            // max-width: 150px;
+            text-decoration: none;
+            text-align: center;
+            // border: none;
+            // max-width: 125px;
+            max-width: 150px;
             background-color: #29cbef;
             transition: 0.5s;
             &:hover {

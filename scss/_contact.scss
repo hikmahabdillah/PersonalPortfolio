@@ -78,15 +78,17 @@
           }
         }
         .socials-media {
+          height: 40px;
           display: flex;
-          gap: 12px;
+          gap: 25px;
+          align-items: center;
           a {
             transition: 0.5s;
+            i {
+              font-size: 40px;
+            }
             &:hover {
               transform: scale(1.1) translateY(3px);
-            }
-            &:nth-child(3) img {
-              transform: translateY(-5px);
             }
           }
         }
