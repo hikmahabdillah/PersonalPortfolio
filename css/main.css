@@ -1176,9 +1176,6 @@ footer p span {
   section.contact .contact-left h3 {
     font-size: 1.8em;
   }
-  section.projects .head-project h2 {
-    white-space: wrap;
-  }
   section.projects .panel h3 {
     font-size: 1.2em !important;
   }
@@ -1338,9 +1335,6 @@ footer p span {
   section.projects {
     padding: 20px;
   }
-  section.projects .head-project h2 {
-    white-space: wrap;
-  }
   section.projects .contain {
     height: 75vh;
     display: flex;
@@ -1386,6 +1380,9 @@ footer p span {
   nav ul.slide {
     transform: translateX(0);
     opacity: 1;
+  }
+  section.projects .head-project h2 {
+    white-space: normal;
   }
   section.experiences .expage {
     margin: 30px 0px;
