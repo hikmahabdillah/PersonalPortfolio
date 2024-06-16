@@ -147,9 +147,22 @@ listItems.forEach(function (li) {
 const panels = document.querySelectorAll(".panel");
 
 panels.forEach((panel) => {
+  const isTablet = () => {
+    if (isTabletView()) {
+      const popupId = panel
+        .querySelector(".popup-btn")
+        .getAttribute("data-popup-id");
+      togglePopup(popupId);
+      console.log(true);
+    }
+  };
   panel.addEventListener("click", () => {
     removeActiveClasses();
     panel.classList.add("active");
+    panel.addEventListener("click", () => {
+      isTablet();
+      // setTimeout(isTablet, 500);
+    });
   });
 });
 

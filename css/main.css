@@ -824,6 +824,7 @@ section.projects .panel.active .gradient-overlay {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0)); /* Sesuaikan nilai RGBA sesuai kebutuhan gelapnya */
 }
 section.projects .panel.active h3 {
+  width: 75%;
   opacity: 1;
   transition: opacity 0.3s ease-in 0.4s;
 }
@@ -1338,6 +1339,12 @@ footer p span {
   }
   section.projects .panel {
     flex: 1;
+  }
+  section.projects .panel span.popup-btn {
+    display: none;
+  }
+  section.projects .panel.active h3 {
+    width: 100%;
   }
   .right-about .main-about h1 {
     font-size: 1.25em !important;
