@@ -744,20 +744,6 @@ section.projects .description {
   padding: 15px 0px;
   max-width: 550px;
 }
-section.projects a {
-  color: #f5f5f5;
-  text-decoration: none;
-  text-align: center;
-  align-self: center;
-  padding: 20px;
-  background-color: #1140ca;
-  border-radius: 10px;
-  font-weight: 600;
-  transition: 0.3s;
-}
-section.projects a:hover {
-  background-color: #132e6c;
-}
 section.projects .contain {
   display: flex;
   width: 70vw;
@@ -783,9 +769,10 @@ section.projects .panel {
   font-family: "Poppins", sans-serif;
 }
 section.projects .panel h3 {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 500;
   position: absolute;
+  width: 90%;
   bottom: 40px;
   left: 30px;
   margin: 0;
@@ -820,12 +807,9 @@ section.projects .panel span:last-of-type {
   margin: 0;
   opacity: 0;
   height: 20px;
-}
-section.projects .panel span:last-of-type img {
-  right: 115px;
-  top: 2.5px;
-  position: absolute;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 section.projects .panel.active {
   flex: 5;
@@ -887,6 +871,10 @@ section .popup .content {
   flex-direction: column;
   gap: 10px;
 }
+section .popup .content h1 {
+  font-size: 22px;
+  width: 90%;
+}
 section .popup .content h2 {
   font-size: 18px;
   font-weight: 200;
@@ -927,17 +915,21 @@ section .popup .content .menu {
   display: flex;
   justify-content: space-around;
 }
-section .popup .content .menu .github {
+section .popup .content .menu a {
+  text-decoration: none;
+}
+section .popup .content .menu .public {
   display: flex;
   align-items: center;
   gap: 10px;
+  color: #131212;
   padding: 10px 15px;
   border-radius: 10px;
   border: 2px solid rgba(19, 18, 18, 0);
   transition: all 0.4s ease-in-out;
   cursor: pointer;
 }
-section .popup .content .menu .github:hover {
+section .popup .content .menu .public:hover {
   border: 2px solid #131212;
 }
 section .popup .content .menu .preview {
@@ -1193,7 +1185,7 @@ footer p span {
     top: 1px;
   }
   section.projects .popup .content {
-    max-width: 270px;
+    max-width: 290px;
   }
   section.projects .popup .content .detail {
     flex-wrap: wrap-reverse;
@@ -1206,7 +1198,7 @@ footer p span {
   .contain {
     width: 100vw;
   }
-  .panel:nth-of-type(4),
+  .panel:nth-of-type(1),
   .panel:nth-of-type(5) {
     display: none;
   }

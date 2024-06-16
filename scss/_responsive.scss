@@ -67,7 +67,7 @@
         }
         .popup {
           .content {
-            max-width: 270px;
+            max-width: 290px;
 
             .detail {
               flex-wrap: wrap-reverse;
@@ -85,7 +85,7 @@
     .contain {
       width: 100vw;
     }
-    .panel:nth-of-type(4),
+    .panel:nth-of-type(1),
     .panel:nth-of-type(5) {
       display: none;
     }
