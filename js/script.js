@@ -145,6 +145,7 @@ listItems.forEach(function (li) {
 
 // Project Event
 const panels = document.querySelectorAll(".panel");
+const overlayPanel = document.querySelector(".gradient-overlay");
 
 panels.forEach((panel) => {
   const isTablet = () => {
@@ -159,10 +160,10 @@ panels.forEach((panel) => {
   panel.addEventListener("click", () => {
     removeActiveClasses();
     panel.classList.add("active");
-    panel.addEventListener("click", () => {
-      isTablet();
-      // setTimeout(isTablet, 500);
-    });
+  });
+  panel.querySelector(".gradient-overlay").addEventListener("click", () => {
+    isTablet();
+    // setTimeout(isTablet, 500);
   });
 });
 
@@ -180,11 +181,15 @@ function togglePopup(popupId) {
   }
 }
 
+function togglePopupClick(element) {
+  const popupId = element.getAttribute("data-popup-id");
+  togglePopup(popupId);
+}
+
 // Add event listeners for each popup button
 document.querySelectorAll(".popup-btn").forEach((link) => {
   link.addEventListener("click", function () {
-    const popupId = this.getAttribute("data-popup-id");
-    togglePopup(popupId);
+    togglePopupClick(link);
     navbar.style.transform = "translateY(-100%)";
     nav.style.transform = "translateY(-100%)";
   });
@@ -193,15 +198,13 @@ document.querySelectorAll(".popup-btn").forEach((link) => {
 // Menambahkan event listeners untuk close button di setiap popup
 document.querySelectorAll(".close-btn").forEach((closeButton) => {
   closeButton.addEventListener("click", function () {
-    const popupId = this.closest(".popup-").id;
-    togglePopup(popupId);
+    togglePopupClick(closeButton);
   });
 });
 
 document.querySelectorAll(".overlay").forEach((overlays) => {
   overlays.addEventListener("click", function () {
-    const popupId = this.closest(".popup-").id;
-    togglePopup(popupId);
+    togglePopupClick(overlays);
   });
 });
 
