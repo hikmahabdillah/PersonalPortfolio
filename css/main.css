@@ -1343,9 +1343,6 @@ footer p span {
   section.projects .panel span.popup-btn {
     display: none;
   }
-  section.projects .panel.active h3 {
-    width: 100%;
-  }
   .right-about .main-about h1 {
     font-size: 1.25em !important;
   }

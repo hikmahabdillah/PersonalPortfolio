@@ -244,9 +244,38 @@ const intro = () => {
   }, 1500);
 };
 
+gsap.registerPlugin(TextPlugin);
+const role = document.querySelector(".role h2");
+const roleLine = document.querySelectorAll(".role hr");
+
+const changeRole = () => {
+  gsap.to(role, {
+    duration: 2,
+    text: {
+      value: "UI / UX DESIGNER",
+      ease: "none",
+    },
+    repeatDelay: 4,
+    repeat: -1,
+    yoyo: true,
+    delay: 4,
+  });
+  gsap.to(roleLine, {
+    x: 0,
+    duration: 2,
+    width: "0",
+    ease: "power2.inOut",
+    repeat: -1,
+    repeatDelay: 1,
+    delay: 3,
+    yoyo: true,
+  });
+};
+
 window.addEventListener("load", () => {
   // if page is fully loaded, remove preloader
   intro();
+  changeRole();
 });
 
 const hidePreloader = () => {
