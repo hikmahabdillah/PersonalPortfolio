@@ -244,6 +244,11 @@ const intro = () => {
   setTimeout(() => {
     gsap.to(boxIntro, { opacity: 0, onComplete: hidePreloader });
     gsap.to(logoIntro, { opacity: 0, onComplete: hidePreloader });
+    AOS.init({
+        once: true,
+        startEvent: 'DOMContentLoaded',
+        offset: 120,
+    });
   }, 1500);
 };
 
