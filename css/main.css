@@ -25,6 +25,7 @@ html::-webkit-scrollbar-thumb {
 body {
   background-color: #0f172a;
   font-family: "Raleway", sans-serif;
+  overflow-x: hidden;
 }
 
 .container {
@@ -277,7 +278,7 @@ section {
   background-color: #0a1838;
 }
 section.about {
-  padding: 100px 30px;
+  padding: 100px 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
