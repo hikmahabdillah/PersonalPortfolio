@@ -192,16 +192,11 @@
               border: 2px solid #8550f5;
             }
           }
-          &:nth-child(9) {
+          &:nth-child(9),
+          &:nth-child(10) {
             border-left: 5px solid #38bdf8;
             img {
               border: 2px solid #38bdf8;
-            }
-          }
-          &:nth-child(10) {
-            border-left: 5px solid #2978ef;
-            img {
-              border: 2px solid #2978ef;
             }
           }
           &:nth-child(11) {
@@ -211,12 +206,6 @@
             }
           }
           &:nth-child(12) {
-            border-left: 5px solid #ef5929;
-            img {
-              border: 2px solid #ef5929;
-            }
-          }
-          &:nth-child(13) {
             border-left: 5px solid #616161;
             img {
               border: 2px solid #616161;

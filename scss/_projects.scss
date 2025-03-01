@@ -192,6 +192,8 @@
         justify-content: space-between;
         align-items: center;
         padding: 0 5px;
+        gap: 10px;
+        flex-wrap: wrap;
         .tech img {
           object-fit: cover;
           object-position: center;

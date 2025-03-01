@@ -557,17 +557,11 @@ section.skills .listTech .minicard:nth-child(8) {
 section.skills .listTech .minicard:nth-child(8) img {
   border: 2px solid #8550f5;
 }
-section.skills .listTech .minicard:nth-child(9) {
+section.skills .listTech .minicard:nth-child(9), section.skills .listTech .minicard:nth-child(10) {
   border-left: 5px solid #38bdf8;
 }
-section.skills .listTech .minicard:nth-child(9) img {
+section.skills .listTech .minicard:nth-child(9) img, section.skills .listTech .minicard:nth-child(10) img {
   border: 2px solid #38bdf8;
-}
-section.skills .listTech .minicard:nth-child(10) {
-  border-left: 5px solid #2978ef;
-}
-section.skills .listTech .minicard:nth-child(10) img {
-  border: 2px solid #2978ef;
 }
 section.skills .listTech .minicard:nth-child(11) {
   border-left: 5px solid #00a607;
@@ -576,15 +570,9 @@ section.skills .listTech .minicard:nth-child(11) img {
   border: 2px solid #00a607;
 }
 section.skills .listTech .minicard:nth-child(12) {
-  border-left: 5px solid #ef5929;
-}
-section.skills .listTech .minicard:nth-child(12) img {
-  border: 2px solid #ef5929;
-}
-section.skills .listTech .minicard:nth-child(13) {
   border-left: 5px solid #616161;
 }
-section.skills .listTech .minicard:nth-child(13) img {
+section.skills .listTech .minicard:nth-child(12) img {
   border: 2px solid #616161;
 }
 section.skills .listTech .minicard img {
@@ -896,6 +884,8 @@ section .popup .content .detail {
   justify-content: space-between;
   align-items: center;
   padding: 0 5px;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 section .popup .content .detail .tech img {
   object-fit: cover;
