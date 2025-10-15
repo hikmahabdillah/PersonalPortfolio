@@ -106,8 +106,8 @@ window.addEventListener("scroll", handleScroll);
 window.addEventListener("load", handleLoad, handleScroll);
 
 // EXPERIENCES LI
-var listItems = document.querySelectorAll(".employment li");
-var listContent = document.querySelectorAll(".content-employ .content");
+var listItems = document.querySelectorAll(".myExperiences li");
+var listContent = document.querySelectorAll(".content-experiences .content");
 
 // Menambahkan event listener untuk setiap elemen <li>
 window.onload = function () {
@@ -245,39 +245,34 @@ const intro = () => {
     gsap.to(boxIntro, { opacity: 0, onComplete: hidePreloader });
     gsap.to(logoIntro, { opacity: 0, onComplete: hidePreloader });
     AOS.init({
-        once: true,
-        startEvent: 'DOMContentLoaded',
-        offset: 120,
+      once: true,
+      startEvent: "DOMContentLoaded",
+      offset: 120,
     });
   }, 1500);
 };
 
 gsap.registerPlugin(TextPlugin);
 const role = document.querySelector(".role h2");
-const roleLine = document.querySelectorAll(".role hr");
+// const roleLine = document.querySelectorAll(".role hr");
 
 const changeRole = () => {
-  gsap.to(role, {
-    duration: 2,
-    text: {
-      value: "UI / UX DESIGNER",
-      ease: "none",
-    },
-    repeatDelay: 4,
-    repeat: -1,
-    yoyo: true,
-    delay: 4,
-  });
-  gsap.to(roleLine, {
-    x: 0,
-    duration: 2,
-    width: "0",
-    ease: "power2.inOut",
-    repeat: -1,
-    repeatDelay: 1,
-    delay: 3,
-    yoyo: true,
-  });
+  const roles = ["FRONTEND DEVELOPER", "BLOCKCHAIN ENTHUSIAST"];
+  let index = 0;
+
+  function changeRole() {
+    gsap.to(".role h2", {
+      duration: 0.8,
+      opacity: 0,
+      onComplete: () => {
+        index = (index + 1) % roles.length;
+        document.querySelector(".role h2").textContent = roles[index];
+        gsap.to(".role h2", { duration: 0.8, opacity: 1 });
+      },
+    });
+  }
+
+  setInterval(changeRole, 3000);
 };
 
 window.addEventListener("load", () => {

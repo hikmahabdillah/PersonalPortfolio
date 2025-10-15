@@ -80,8 +80,6 @@
               transform: translateY(-5px) scale(1.05);
             }
           }
-
-          // css card
           &:nth-child(2) {
             border-left: 5px solid #00a607;
             img {
@@ -137,78 +135,117 @@
           border-radius: 5px;
           width: 250px;
           align-items: center;
-          border-left: 5px solid #ef5929;
+          border-left: 5px solid #f7df1e; // default: JavaScript yellow
           transition: 0.5s;
-          // transition-delay: 0ms !important;
 
           &:hover {
-            // box-shadow: 0 3px 10px rgba(255, 255, 255, 0.5);
-            // // filter: drop-shadow();
             img {
               box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
               transform: translateY(-5px) scale(1.05);
             }
           }
-          // css card
+
+          /* JavaScript */
+          &:nth-child(1) {
+            border-left: 5px solid #f7df1e;
+            img {
+              border: 2px solid #f7df1e;
+            }
+          }
+
+          /* TypeScript */
           &:nth-child(2) {
-            border-left: 5px solid #2978ef;
+            border-left: 5px solid #3178c6;
             img {
-              border: 2px solid #2978ef;
+              border: 2px solid #3178c6;
             }
           }
+
+          /* React.js */
           &:nth-child(3) {
-            border-left: 5px solid #d6ce0f;
+            border-left: 5px solid #61dafb;
             img {
-              border: 2px solid #d6ce0f;
+              border: 2px solid #61dafb;
             }
           }
+
+          /* Next.js */
           &:nth-child(4) {
-            border-left: 5px solid #ff5baa;
+            border-left: 5px solid #000000;
             img {
-              border: 2px solid #ff5baa;
+              border: 2px solid #000000;
             }
           }
+
+          /* Tailwind CSS */
           &:nth-child(5) {
-            border-left: 5px solid #b395f3;
-            img {
-              border: 2px solid #b395f3;
-            }
-          }
-          &:nth-child(6) {
-            border-left: 5px solid #db643e;
-            img {
-              border: 2px solid #db643e;
-            }
-          }
-          &:nth-child(7) {
-            border-left: 5px solid #2960ef;
-            img {
-              border: 2px solid #2960ef;
-            }
-          }
-          &:nth-child(8) {
-            border-left: 5px solid #8550f5;
-            img {
-              border: 2px solid #8550f5;
-            }
-          }
-          &:nth-child(9),
-          &:nth-child(10) {
             border-left: 5px solid #38bdf8;
             img {
               border: 2px solid #38bdf8;
             }
           }
-          &:nth-child(11) {
-            border-left: 5px solid #00a607;
+
+          /* Bootstrap */
+          &:nth-child(6) {
+            border-left: 5px solid #7952b3;
             img {
-              border: 2px solid #00a607;
+              border: 2px solid #7952b3;
             }
           }
-          &:nth-child(12) {
-            border-left: 5px solid #616161;
+
+          /* Express JS */
+          &:nth-child(7) {
+            border-left: 5px solid #303030;
             img {
-              border: 2px solid #616161;
+              border: 2px solid #303030;
+            }
+          }
+
+          /* Laravel */
+          &:nth-child(8) {
+            border-left: 5px solid #ff2d20;
+            img {
+              border: 2px solid #ff2d20;
+            }
+          }
+
+          /* PHP */
+          &:nth-child(9) {
+            border-left: 5px solid #777bb3;
+            img {
+              border: 2px solid #777bb3;
+            }
+          }
+
+          /* MongoDB */
+          &:nth-child(10) {
+            border-left: 5px solid #47a248;
+            img {
+              border: 2px solid #47a248;
+            }
+          }
+
+          /* MySQL */
+          &:nth-child(11) {
+            border-left: 5px solid #00758f;
+            img {
+              border: 2px solid #00758f;
+            }
+          }
+
+          /* Ethers.js */
+          &:nth-child(12) {
+            border-left: 5px solid #627eea;
+            img {
+              border: 2px solid #627eea;
+            }
+          }
+
+          /* Hardhat */
+          &:nth-child(13) {
+            border-left: 5px solid #f4c542;
+            img {
+              border: 2px solid #f4c542;
             }
           }
 
